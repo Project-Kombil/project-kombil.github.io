@@ -1,7 +1,7 @@
 {
 	"name": "project-kombil",
 	"private": true,
-	"homepage": "https://github.com/project-kombil/project-kombil.github.io",
+	"homepage": "https://project-kombil.github.io",
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
