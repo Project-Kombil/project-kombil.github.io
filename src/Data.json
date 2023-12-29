@@ -1,0 +1,378 @@
+{
+	"heroData": {
+		"data": {
+			"imgAuthor": "./images/section/hero-img.jpg",
+			"bgImgLink": "./images/background/hero-bg.jpg",
+			"title": "Hi, I am <span>Alefay Kombil</span>",
+			"text": "I am a front-end developer with a strong focus on UI/UX design, creating visually appealing designs and experiences that aim to attract, inspire, spark desires, and motivate people to stay engaged."
+		}
+	},
+	"aboutData": {
+		"imgLink": "./images/section/kombil.jpg",
+		"title": "Alefay Kombil",
+		"subtitle": "Front-end Developer",
+		"text": "As a devoted Front-End Developer, I bring a robust background in UI/UX design. Proficient in modern technologies and diverse Content Management Tools, I apply my skills to create engaging digital experiences. With a foundation built on experience in the Hospitality and Tourism Industry, I prioritize user needs to deliver a seamless online journey. Recognized for my creative approach, meticulous attention to detail, and effective problem-solving skills, I am dedicated to continuous learning, always staying ahead of the curve with the latest tech trends.",
+		"details": [
+			{
+				"title": "Email",
+				"info": "alefay.bunes@gmail.com"
+			},
+			{
+				"title": "From",
+				"info": "Papua New Guinea"
+			},
+			{
+				"title": "Language",
+				"info": "English, Tok Pisin"
+			}
+		]
+	},
+	"serviceData": {
+		"services": [
+			{
+				"imgLink": "./images/icon/uiux.png",
+				"title": "UI/UX Design",
+				"text": "Create a sleek and intuitive UI/UX design that seamlessly showcases client's work and captivates visitors with an engaging user experience.",
+				"effect": "zoom-out-up",
+				"duration": "500",
+				"delay": "300"
+			},
+			{
+				"imgLink": "./images/icon/design.png",
+				"title": "Responsive Design",
+				"text": "Implement a responsive design approach, ensuring seamless user experiences across various devices, and showcasing  accessibility and user satisfaction in applications.",
+				"effect": "zoom-out-up",
+				"duration": "500",
+				"delay": "700"
+			},
+			{
+				"imgLink": "./images/icon/prototyping.png",
+				"title": "Prototyping",
+				"text": "Enable client collaboration with a streamlined prototyping process, offering previews and feedback before application development.",
+				"effect": "zoom-out-up",
+				"duration": "500",
+				"delay": "200"
+			},
+			{
+				"imgLink": "./images/icon/react.png",
+				"title": "React",
+				"text": "Delivering dynamic and responsive user interfaces that elevate digital experiences with ReactJS.",
+				"effect": "zoom-out-up",
+				"duration": "500",
+				"delay": "400"
+			},
+			{
+				"imgLink": "./images/icon/javascript.png",
+				"title": "Vanilla Javascript",
+				"text": "Utilize Vanilla JavaScript to create seamless and dynamic applications, enhancing user interactions.",
+				"effect": "zoom-out-up",
+				"duration": "500",
+				"delay": "600"
+			},
+			{
+				"imgLink": "./images/icon/wordpress.png",
+				"title": "WordPress",
+				"text": "Deliver user-friendly and scalable websites that seamlessly integrate functionality with a captivating user experience, leveraging Content Management Systems such as WordPress",
+				"effect": "zoom-out-up",
+				"duration": "500",
+				"delay": "500"
+			}
+		]
+	},
+	"skillData": {
+		"title": "All the skills that I have in that field of work are mentioned.",
+		"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.",
+		"skills": [
+			{
+				"title": "UI Design",
+				"progress": "80%",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "200"
+			},
+			{
+				"title": "UX Design",
+				"progress": "90%",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "300"
+			},
+			{
+				"title": "Adobe XD",
+				"progress": "70%",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "400"
+			},
+			{
+				"title": "JavaScript",
+				"progress": "70%",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "500"
+			},
+			{
+				"title": "React",
+				"progress": "70%",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "600"
+			},
+			{
+				"title": "Content Management Systems",
+				"progress": "90%",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "700"
+			}
+		]
+	},
+	"creationData": {
+		"creationItems": [
+			{
+				"imgLink": "./images/portfolio/portfolio1.jpg",
+				"imgLinkLg": "./images/portfolio/portfolio1_lg.jpg",
+				"title": "Product Design",
+				"subTitle": "Design / Marketing",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "200"
+			},
+			{
+				"imgLink": "./images/portfolio/portfolio2.jpg",
+				"imgLinkLg": "./images/portfolio/portfolio2_lg.jpg",
+				"title": "Product Design",
+				"subTitle": "Design / Marketing",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "300"
+			},
+			{
+				"imgLink": "./images/portfolio/portfolio3.jpg",
+				"imgLinkLg": "./images/portfolio/portfolio3_lg.jpg",
+				"title": "Product Design",
+				"subTitle": "Design / Marketing",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "400"
+			},
+			{
+				"imgLink": "./images/portfolio/portfolio4.jpg",
+				"imgLinkLg": "./images/portfolio/portfolio4_lg.jpg",
+				"title": "Product Design",
+				"subTitle": "Design / Marketing",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "500"
+			},
+			{
+				"imgLink": "./images/portfolio/portfolio5.jpg",
+				"imgLinkLg": "./images/portfolio/portfolio5_lg.jpg",
+				"title": "Product Design",
+				"subTitle": "Design / Marketing",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "600"
+			},
+			{
+				"imgLink": "./images/portfolio/portfolio6.jpg",
+				"imgLinkLg": "./images/portfolio/portfolio6_lg.jpg",
+				"title": "Product Design",
+				"subTitle": "Design / Marketing",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "700"
+			},
+			{
+				"imgLink": "./images/portfolio/portfolio1.jpg",
+				"imgLinkLg": "./images/portfolio/portfolio1_lg.jpg",
+				"title": "Product Design",
+				"subTitle": "Design / Marketing",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "200"
+			},
+			{
+				"imgLink": "./images/portfolio/portfolio2.jpg",
+				"imgLinkLg": "./images/portfolio/portfolio2_lg.jpg",
+				"title": "Product Design",
+				"subTitle": "Design / Marketing",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "300"
+			},
+			{
+				"imgLink": "./images/portfolio/portfolio3.jpg",
+				"imgLinkLg": "./images/portfolio/portfolio3_lg.jpg",
+				"title": "Product Design",
+				"subTitle": "Design / Marketing",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "400"
+			},
+			{
+				"imgLink": "./images/portfolio/portfolio4.jpg",
+				"imgLinkLg": "./images/portfolio/portfolio4_lg.jpg",
+				"title": "Product Design",
+				"subTitle": "Design / Marketing",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "500"
+			},
+			{
+				"imgLink": "./images/portfolio/portfolio5.jpg",
+				"imgLinkLg": "./images/portfolio/portfolio5_lg.jpg",
+				"title": "Product Design",
+				"subTitle": "Design / Marketing",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "600"
+			},
+			{
+				"imgLink": "./images/portfolio/portfolio6.jpg",
+				"imgLinkLg": "./images/portfolio/portfolio6_lg.jpg",
+				"title": "Product Design",
+				"subTitle": "Design / Marketing",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "700"
+			}
+		]
+	},
+	"reviewData": {
+		"useFor": "review",
+		"sliderSetting": {
+			"infinite": true,
+			"speed": 500,
+			"slidesToShow": 3,
+			"slidesToScroll": 1,
+			"arrows": false,
+			"responsive": [
+				{
+					"breakpoint": 991,
+					"settings": {
+						"slidesToShow": 2,
+						"autoplay": true
+					}
+				},
+				{
+					"breakpoint": 767,
+					"settings": {
+						"slidesToShow": 1,
+						"autoplay": true
+					}
+				}
+			]
+		},
+		"informations": [
+			{
+				"imgLink": "./images/client/client1.png",
+				"title": "Richard Miles",
+				"designation": "Chairman",
+				"text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam accusamus autem itaque blanditiis enim debitis totam facilis reiciendis voluptate aspernatur!"
+			},
+			{
+				"imgLink": "./images/client/client2.png",
+				"title": "Vesta Shufelt",
+				"designation": "Executive Director",
+				"text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam accusamus autem itaque blanditiis enim debitis totam facilis reiciendis voluptate aspernatur!"
+			},
+			{
+				"imgLink": "./images/client/client3.png",
+				"title": "Joseph Alves",
+				"designation": "Managing Director",
+				"text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam accusamus autem itaque blanditiis enim debitis totam facilis reiciendis voluptate aspernatur!"
+			},
+			{
+				"imgLink": "./images/client/client1.png",
+				"title": "Richard Miles",
+				"designation": "Chairman",
+				"text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam accusamus autem itaque blanditiis enim debitis totam facilis reiciendis voluptate aspernatur!"
+			},
+			{
+				"imgLink": "./images/client/client2.png",
+				"title": "Vesta Shufelt",
+				"designation": "Executive Director",
+				"text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam accusamus autem itaque blanditiis enim debitis totam facilis reiciendis voluptate aspernatur!"
+			},
+			{
+				"imgLink": "./images/client/client3.png",
+				"title": "Joseph Alves",
+				"designation": "Managing Director",
+				"text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam accusamus autem itaque blanditiis enim debitis totam facilis reiciendis voluptate aspernatur!"
+			}
+		]
+	},
+	"portfolioData": {
+		"experienceTitle": "Experience",
+		"experience": [
+			{
+				"title": "Lead Front-end Developer",
+				"duration": "Sep 2022 - Present",
+				"subTitle": "Be Pacific Digital Agency, National Capital District",
+				"text": "Liased with senior stakeholders to convert business requirements into technical specifications. I have crafted detailed plans and documentation for system design and feature implementation, aligning with business objectives. Took the lead in designing and implementing applications that met specific business processes and requirements, enhancing operational efficiency. Additionally, I have implemented designs that led to a significant increase in user engagement, enhancing the overall user experience and satisfaction."
+			},
+			{
+				"title": "Front-end Developer",
+				"duration": "Mar 2022 - Aug 2022",
+				"subTitle": "Be Pacific Digital Agency, National Capital District",
+				"text": "I worked closely with my supervisor to translate requirements into technical specifications. I created detailed plans and documentation for system design and feature implementation, ensuring alignment with business objectives. I resolved bugs and assisted in implement designs that led to a significant increase in user engagement, improving the overall user experience and satisfaction."
+			},
+			{
+				"title": "Junior Software Developer",
+				"duration": "Jun 2021 - Jul 2021",
+				"subTitle": "SwitchMaven, National Capital District",
+				"text": "Utilized the MERN stack and Grommet, a JavaScript theming library, to develop a cryptocurrency trading application, showcasing my proficiency in modern web technologies. I played a key role in the development of various features of the application, enhancing its functionality and user experience. I collaborated effectively with a team of developers, ensuring the timely delivery of the application that met clients requirements"
+			}
+		],
+		"educationTitle": "Education",
+		"education": [
+			{
+				"title": "Software Development",
+				"duration": "2020 - 2021",
+				"subTitle": "SwitchMaven Bootcamp",
+				"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis."
+			},
+			{
+				"title": "Java Programming Certificate",
+				"duration": "2020 - 2021",
+				"subTitle": "University of Papua New Guinea (CEIT)",
+				"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis."
+			},
+			{
+				"title": "Advanced Web Technology Certificate",
+				"duration": "2020",
+				"subTitle": "University of Papua New Guinea (CEIT)",
+				"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis."
+			}
+		]
+	},
+	"contactData": {
+		"formTitle": "Just say Hello",
+		"title": "Contact Info",
+		"subTitle": "My socials",
+		"text": "Ready to embark on a creative journey together? get in touch with me and let’s get started!"
+	},
+	"socialData": [
+		{
+			"icon": "linkedin",
+			"title": "LinkedIn",
+			"link": "https://www.linkedin.com/in/kombil-alefay/"
+		},
+		{
+			"icon": "twitter",
+			"title": "Twitter",
+			"link": "https://twitter.com/YourM4tu"
+		}
+	],
+	"socialData2": [
+		{
+			"icon": "twitter",
+			"link": "https://twitter.com/YourM4tu"
+		},
+		{
+			"icon": "github",
+			"link": "https://github.com/project-kombil"
+		}
+	]
+}
