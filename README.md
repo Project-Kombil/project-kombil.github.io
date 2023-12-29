@@ -8,7 +8,7 @@ I specialize in creating intuitive and engaging user interfaces with a focus on 
 
 ## Portfolio
 
-In this portfolio, you will find examples of my work in UI/UX design and front-end development. Feel free to explore and reach out if you have any questions or opportunities!
+In this portfolio, you will find examples of my work in UI/UX design and front-end development. Feel free to explore and reach out if you have any questions!
 
 ## Contact Me
 
