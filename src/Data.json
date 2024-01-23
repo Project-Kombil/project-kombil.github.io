@@ -132,17 +132,26 @@
 			{
 				"imgLink": "./images/portfolio/portfolio1.jpg",
 				"imgLinkLg": "./images/portfolio/portfolio1_lg.jpg",
-				"title": "Product Design",
-				"subTitle": "Design / Marketing",
+				"title": "Abus Na Kumu E-Commerce Website",
+				"subTitle": "Website Design and Development",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "200"
 			},
 			{
+				"imgLink": "./images/portfolio/portfolio6.jpg",
+				"imgLinkLg": "./images/portfolio/portfolio6_lg.jpg",
+				"title": "Atlas Steel PNG Website",
+				"subTitle": "Website Design and Development",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "700"
+			},
+			{
 				"imgLink": "./images/portfolio/portfolio2.jpg",
 				"imgLinkLg": "./images/portfolio/portfolio2_lg.jpg",
-				"title": "Product Design",
-				"subTitle": "Design / Marketing",
+				"title": "Solar Solutions Website",
+				"subTitle": "Website Design and Development",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "300"
@@ -150,8 +159,8 @@
 			{
 				"imgLink": "./images/portfolio/portfolio3.jpg",
 				"imgLinkLg": "./images/portfolio/portfolio3_lg.jpg",
-				"title": "Product Design",
-				"subTitle": "Design / Marketing",
+				"title": "Physique Gospel Support Center Website",
+				"subTitle": "Website Design and Development",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "400"
@@ -159,8 +168,8 @@
 			{
 				"imgLink": "./images/portfolio/portfolio4.jpg",
 				"imgLinkLg": "./images/portfolio/portfolio4_lg.jpg",
-				"title": "Product Design",
-				"subTitle": "Design / Marketing",
+				"title": "PETA Sports Management Website",
+				"subTitle": "Website Development",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "500"
@@ -168,74 +177,20 @@
 			{
 				"imgLink": "./images/portfolio/portfolio5.jpg",
 				"imgLinkLg": "./images/portfolio/portfolio5_lg.jpg",
-				"title": "Product Design",
-				"subTitle": "Design / Marketing",
+				"title": "Tour Niugini Website",
+				"subTitle": "Website Design and Development",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "600"
-			},
-			{
-				"imgLink": "./images/portfolio/portfolio6.jpg",
-				"imgLinkLg": "./images/portfolio/portfolio6_lg.jpg",
-				"title": "Product Design",
-				"subTitle": "Design / Marketing",
-				"effect": "fade-up",
-				"duration": "500",
-				"delay": "700"
-			},
-			{
-				"imgLink": "./images/portfolio/portfolio1.jpg",
-				"imgLinkLg": "./images/portfolio/portfolio1_lg.jpg",
-				"title": "Product Design",
-				"subTitle": "Design / Marketing",
-				"effect": "fade-up",
-				"duration": "500",
-				"delay": "200"
-			},
-			{
-				"imgLink": "./images/portfolio/portfolio2.jpg",
-				"imgLinkLg": "./images/portfolio/portfolio2_lg.jpg",
-				"title": "Product Design",
-				"subTitle": "Design / Marketing",
-				"effect": "fade-up",
-				"duration": "500",
-				"delay": "300"
-			},
-			{
-				"imgLink": "./images/portfolio/portfolio3.jpg",
-				"imgLinkLg": "./images/portfolio/portfolio3_lg.jpg",
-				"title": "Product Design",
-				"subTitle": "Design / Marketing",
-				"effect": "fade-up",
-				"duration": "500",
-				"delay": "400"
-			},
-			{
-				"imgLink": "./images/portfolio/portfolio4.jpg",
-				"imgLinkLg": "./images/portfolio/portfolio4_lg.jpg",
-				"title": "Product Design",
-				"subTitle": "Design / Marketing",
-				"effect": "fade-up",
-				"duration": "500",
-				"delay": "500"
 			},
 			{
 				"imgLink": "./images/portfolio/portfolio5.jpg",
 				"imgLinkLg": "./images/portfolio/portfolio5_lg.jpg",
-				"title": "Product Design",
-				"subTitle": "Design / Marketing",
+				"title": "Crypto Currency Trading Platform",
+				"subTitle": "Front-end Development",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "600"
-			},
-			{
-				"imgLink": "./images/portfolio/portfolio6.jpg",
-				"imgLinkLg": "./images/portfolio/portfolio6_lg.jpg",
-				"title": "Product Design",
-				"subTitle": "Design / Marketing",
-				"effect": "fade-up",
-				"duration": "500",
-				"delay": "700"
 			}
 		]
 	},
@@ -319,7 +274,7 @@
 				"text": "I worked closely with my supervisor to translate requirements into technical specifications. I created detailed plans and documentation for system design and feature implementation, ensuring alignment with business objectives. I resolved bugs and assisted in implement designs that led to a significant increase in user engagement, improving the overall user experience and satisfaction."
 			},
 			{
-				"title": "Junior Software Developer",
+				"title": "Junior Software Engineer Intern",
 				"duration": "Jun 2021 - Jul 2021",
 				"subTitle": "SwitchMaven, National Capital District",
 				"text": "Utilized the MERN stack and Grommet, a JavaScript theming library, to develop a cryptocurrency trading application, showcasing my proficiency in modern web technologies. I played a key role in the development of various features of the application, enhancing its functionality and user experience. I collaborated effectively with a team of developers, ensuring the timely delivery of the application that met clients requirements"
