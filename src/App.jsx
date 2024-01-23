@@ -25,6 +25,19 @@ function NotFound() {
 function App() {
 	useEffect(() => {
 		Aos.init({ once: true });
+
+		const handleScroll = () => {
+			ReactGA.event({
+				category: "Scroll",
+				action: "User Scrolled",
+			});
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
 	}, []);
 
 	return (
