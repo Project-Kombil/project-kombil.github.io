@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Icon } from "@iconify/react";
+// import { Icon } from "@iconify/react";
 
 const SingleCreation = ({ data, getData }) => {
 	const { imgLink, imgLinkLg, title, subTitle, effect, duration, delay } = data;
@@ -21,7 +21,7 @@ const SingleCreation = ({ data, getData }) => {
 							<img src={imgLink} alt="portfolio" />
 						</div>
 						<div className="st-portfolio-item-hover">
-							<Icon icon="mdi:eye" />
+							{/* <Icon icon="mdi:eye" /> */}
 							<h5>{title}</h5>
 							{/* <p>{subTitle}</p> */}
 						</div>

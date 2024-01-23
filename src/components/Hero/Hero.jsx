@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import React from "react";
 import "./Hero.scss";
 import perser from "html-react-parser";
 import SocialLinks2 from "../SocialLinks/SocialLinks2";
