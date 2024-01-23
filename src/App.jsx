@@ -5,7 +5,14 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Layout from "./components/Layout/Layout";
 
+import ReactGA from "react-ga";
+
 function NotFound() {
+	useEffect(() => {
+		ReactGA.initialize("G-VX8LXY705E");
+		ReactGA.pageview(window.location.pathname + window.location.search);
+	}, []);
+
 	const navigate = useNavigate();
 
 	useEffect(() => {
@@ -24,7 +31,15 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Layout />}>
-					<Route index element={<Home />} />
+					<Route
+						index
+						element={<Home />}
+						onStart={() => {
+							ReactGA.pageview(
+								window.location.pathname + window.location.search
+							);
+						}}
+					/>
 					<Route path="*" element={<NotFound to="/" />} />
 				</Route>
 			</Routes>
