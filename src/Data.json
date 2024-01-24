@@ -130,15 +130,6 @@
 	"creationData": {
 		"creationItems": [
 			{
-				"imgLink": "./images/portfolio/portfolio1.jpg",
-				"imgLinkLg": "./images/portfolio/portfolio1_lg.jpg",
-				"title": "Abus Na Kumu E-Commerce Website",
-				"subTitle": "Website Design and Development",
-				"effect": "fade-up",
-				"duration": "500",
-				"delay": "200"
-			},
-			{
 				"imgLink": "./images/portfolio/portfolio6.jpg",
 				"imgLinkLg": "./images/portfolio/portfolio6_lg.jpg",
 				"title": "Atlas Steel PNG Website",
@@ -155,6 +146,15 @@
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "300"
+			},
+			{
+				"imgLink": "./images/portfolio/portfolio1.jpg",
+				"imgLinkLg": "./images/portfolio/portfolio1_lg.jpg",
+				"title": "Abus Na Kumu E-Commerce Website",
+				"subTitle": "Website Design and Development",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "200"
 			},
 			{
 				"imgLink": "./images/portfolio/portfolio3.jpg",
