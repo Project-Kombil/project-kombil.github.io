@@ -11,7 +11,7 @@
 		"imgLink": "./images/section/kombil.jpg",
 		"title": "Alefay Kombil",
 		"subtitle": "Front-end Developer",
-		"text": "As a devoted Front-End Developer, I bring a robust background in UI/UX design. Proficient in modern technologies and diverse Content Management Tool. I apply my skills to create engaging digital experiences. With a foundation built on experience in the Hospitality and Tourism Industry, I prioritize user needs to deliver a seamless online journey. Recognized for my creative approach, meticulous attention to detail, and effective problem-solving skills, I am dedicated to continuous learning, always staying ahead of the curve with the latest tech trends.",
+		"text": "As a devoted Front-End Developer, I bring a robust background in UI/UX design. Proficient in modern technologies and diverse Content Management Tool. I apply my skills to create engaging digital experiences. With a foundation built on experience in the Hospitality and Tourism Industry, I prioritize user needs to deliver a seamless online journey. Recognized for my creative approach, attention to detail, and effective problem-solving skills, I am dedicated to continuous learning, always staying ahead of the curve with the latest tech trends.",
 		"details": [
 			{
 				"title": "Email",
@@ -130,8 +130,17 @@
 	"creationData": {
 		"creationItems": [
 			{
-				"imgLink": "./images/portfolio/portfolio6.jpg",
-				"imgLinkLg": "./images/portfolio/portfolio6_lg.jpg",
+				"imgLink": "./images/portfolio/bcpng.png",
+				"imgLinkLg": "./images/portfolio/portfolio6.jpg",
+				"title": "Business Council of Papua New Guinea Website",
+				"subTitle": "Website Design and Development",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "700"
+			},
+			{
+				"imgLink": "./images/portfolio/atlas-steel-png.png",
+				"imgLinkLg": "./images/portfolio/portfolio6.jpg",
 				"title": "Atlas Steel PNG Website",
 				"subTitle": "Website Design and Development",
 				"effect": "fade-up",
@@ -139,8 +148,26 @@
 				"delay": "700"
 			},
 			{
-				"imgLink": "./images/portfolio/portfolio2.jpg",
-				"imgLinkLg": "./images/portfolio/portfolio2_lg.jpg",
+				"imgLink": "./images/portfolio/phantom-development-limited.png",
+				"imgLinkLg": "./images/portfolio/portfolio6.jpg",
+				"title": "Phantom Development Limited",
+				"subTitle": "Website Design and Development",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "700"
+			},
+			{
+				"imgLink": "./images/portfolio/abus-na-kumu.png",
+				"imgLinkLg": "./images/portfolio/portfolio1.jpg",
+				"title": "Abus Na Kumu E-Commerce Website",
+				"subTitle": "Website Design and Development",
+				"effect": "fade-up",
+				"duration": "500",
+				"delay": "200"
+			},
+			{
+				"imgLink": "./images/portfolio/solar-solutions.png",
+				"imgLinkLg": "./images/portfolio/portfolio2.jpg",
 				"title": "Solar Solutions Website",
 				"subTitle": "Website Design and Development",
 				"effect": "fade-up",
@@ -148,13 +175,13 @@
 				"delay": "300"
 			},
 			{
-				"imgLink": "./images/portfolio/portfolio1.jpg",
-				"imgLinkLg": "./images/portfolio/portfolio1_lg.jpg",
-				"title": "Abus Na Kumu E-Commerce Website",
-				"subTitle": "Website Design and Development",
+				"imgLink": "./images/portfolio/peta.png",
+				"imgLinkLg": "./images/portfolio/portfolio4_lg.jpg",
+				"title": "PETA Sports Management Website",
+				"subTitle": "Website Development",
 				"effect": "fade-up",
 				"duration": "500",
-				"delay": "200"
+				"delay": "500"
 			},
 			{
 				"imgLink": "./images/portfolio/portfolio3.jpg",
@@ -166,16 +193,7 @@
 				"delay": "400"
 			},
 			{
-				"imgLink": "./images/portfolio/portfolio4.jpg",
-				"imgLinkLg": "./images/portfolio/portfolio4_lg.jpg",
-				"title": "PETA Sports Management Website",
-				"subTitle": "Website Development",
-				"effect": "fade-up",
-				"duration": "500",
-				"delay": "500"
-			},
-			{
-				"imgLink": "./images/portfolio/portfolio5.jpg",
+				"imgLink": "./images/portfolio/tour-niugini.png",
 				"imgLinkLg": "./images/portfolio/portfolio5_lg.jpg",
 				"title": "Tour Niugini Website",
 				"subTitle": "Website Design and Development",
@@ -184,7 +202,7 @@
 				"delay": "600"
 			},
 			{
-				"imgLink": "./images/portfolio/portfolio5.jpg",
+				"imgLink": "./images/portfolio/crypto.png",
 				"imgLinkLg": "./images/portfolio/portfolio5_lg.jpg",
 				"title": "Crypto Currency Trading Platform",
 				"subTitle": "Front-end Development",
