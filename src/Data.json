@@ -4,7 +4,7 @@
 			"imgAuthor": "./images/section/hero-img.jpg",
 			"bgImgLink": "./images/background/hero-bg.jpg",
 			"title": "Hi, I am <span>Alefay Kombil</span>",
-			"text": "I am a front-end developer with a strong focus on UI/UX design, creating visually appealing designs and experiences that aim to attract, inspire, spark desires, and motivate people to stay engaged."
+			"text": "Frontend developer with a passion for UI/UX design. I build beautiful and functional user interfaces with React and other frontend technologies."
 		}
 	},
 	"aboutData": {
@@ -333,15 +333,15 @@
 			"link": "https://www.linkedin.com/in/kombil-alefay/"
 		},
 		{
-			"icon": "twitter",
+			"icon": "x-twitter",
 			"title": "Twitter",
-			"link": "https://twitter.com/YourM4tu"
+			"link": "https://x.com/YourM4tu"
 		}
 	],
 	"socialData2": [
 		{
-			"icon": "twitter",
-			"link": "https://twitter.com/YourM4tu"
+			"icon": "x-twitter",
+			"link": "https://x.com/YourM4tu"
 		},
 		{
 			"icon": "github",
