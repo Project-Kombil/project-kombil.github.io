@@ -32,7 +32,7 @@ const ContactForm = () => {
         icon: "error",
         text: "Please enter a valid email address",
         showConfirmButton: false,
-        showCloseButton: true
+        showCloseButton: true,
       });
       return;
     }
@@ -57,7 +57,7 @@ const ContactForm = () => {
             showCloseButton: true,
             showConfirmButton: false,
             background: "#fdfeff",
-            timer: 2000
+            timer: 2000,
           });
           form.current.reset();
         },
@@ -68,7 +68,7 @@ const ContactForm = () => {
             showCloseButton: true,
             showConfirmButton: false,
             background: "#fdfeff",
-            timer: 3000
+            timer: 3000,
           });
         }
       );
