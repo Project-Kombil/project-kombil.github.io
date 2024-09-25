@@ -6,7 +6,10 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
     display: "block",
   };
   return (
-    <div className="modal show fade bd-example-modal-lg modal" style={modalStyle}>
+    <div
+      className="modal show fade bd-example-modal-lg modal"
+      style={modalStyle}
+    >
       <div className="modal-dialog modal-lg modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-header">
@@ -24,7 +27,6 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
             <p className="modal-subtitle">{subTitle}</p>
             <br />
             <p className="modal-subtitle">Technologies Involved:</p>
-            {/* Mapping the array to a list */}
             {technology && technology.length > 0 && (
               <ul>
                 {technology.map((item, index) => (

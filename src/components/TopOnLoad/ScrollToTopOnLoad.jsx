@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 const ScrollToTopOnLoad = () => {
   const history = useHistory();
@@ -12,4 +12,4 @@ const ScrollToTopOnLoad = () => {
   return null;
 };
 
-export default ScrollToTopOnLoad
+export default ScrollToTopOnLoad;

@@ -2,8 +2,17 @@ import PropTypes from "prop-types";
 // import { Icon } from "@iconify/react";
 
 const SingleCreation = ({ data, getData }) => {
-  const { imgLink, imgLinkLg, title, subTitle, link, technology, effect, duration, delay } =
-    data;
+  const {
+    imgLink,
+    imgLinkLg,
+    title,
+    subTitle,
+    link,
+    technology,
+    effect,
+    duration,
+    delay,
+  } = data;
 
   return (
     <div
