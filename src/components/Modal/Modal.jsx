@@ -6,8 +6,8 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
     display: "block",
   };
   return (
-    <div className="modal show fade bd-example-modal-lg" style={modalStyle}>
-      <div className="modal-dialog modal-lg">
+    <div className="modal show fade bd-example-modal-lg modal" style={modalStyle}>
+      <div className="modal-dialog modal-lg modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-header">
             <h4 className="modal-title">{title}</h4>
@@ -19,7 +19,7 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
           </div>
           <div className="modal-body">
             <div className="st-flex-center">
-              <img src={img} alt={title}/>
+              <img src={img} alt={title} />
             </div>
             <p className="modal-subtitle">{subTitle}</p>
             <br />
@@ -28,11 +28,13 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
             {technology && technology.length > 0 && (
               <ul>
                 {technology.map((item, index) => (
-                  <li className="modal-subtitle" key={index}>{item}</li>  
+                  <li className="modal-subtitle" key={index}>
+                    {item}
+                  </li>
                 ))}
               </ul>
             )}
-             {link && link.trim() !== "" && (
+            {link && link.trim() !== "" && (
               <a
                 href={link}
                 className="modal-link"
