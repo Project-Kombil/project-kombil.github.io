@@ -134,7 +134,7 @@
 				"imgLinkLg": "./images/portfolio/bcpng-home.webp",
 				"title": "Business Council of Papua New Guinea Website",
 				"subTitle": "Website Design and Development",
-				"link": "bcpng.org.pg",
+				"link": "https://bcpng.org.pg",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "700"
@@ -144,7 +144,7 @@
 				"imgLinkLg": "./images/portfolio/atlas-steel-home.webp",
 				"title": "Atlas Steel PNG Website",
 				"subTitle": "Website Design and Development",
-				"link": "atlassteelpng.com.pg",
+				"link": "https://atlassteelpng.com.pg",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "700"
@@ -154,7 +154,7 @@
 				"imgLinkLg": "./images/portfolio/phantom-development-home.webp",
 				"title": "Phantom Development Limited",
 				"subTitle": "Website Design and Development",
-				"link": "phantomdevelopmentltd.com",
+				"link": "https://phantomdevelopmentltd.com",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "700"
@@ -164,7 +164,7 @@
 				"imgLinkLg": "./images/portfolio/abus-na-kumu-home.webp",
 				"title": "Abus Na Kumu E-Commerce Website",
 				"subTitle": "Website Design and Development",
-				"link": "abusnakumu.com.pg",
+				"link": "https://abusnakumu.com.pg",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "200"
@@ -174,7 +174,7 @@
 				"imgLinkLg": "./images/portfolio/solar-solutions-home.webp",
 				"title": "Solar Solutions Website",
 				"subTitle": "Website Design and Development",
-				"link": "solarsolutionspng.com",
+				"link": "https://solarsolutionspng.com",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "300"
@@ -184,7 +184,7 @@
 				"imgLinkLg": "./images/portfolio/peta-home.webp",
 				"title": "PETA Sports Management Website",
 				"subTitle": "Website Development",
-				"link": "peta.com.pg",
+				"link": "https://peta.com.pg",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "500"
@@ -194,7 +194,7 @@
 				"imgLinkLg": "./images/portfolio/crypto-home.png",
 				"title": "Crypto Currency Trading Platform",
 				"subTitle": "Front-end Development",
-				"link": "#",
+			
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "600"
@@ -329,12 +329,12 @@
 	],
 	"socialData2": [
 		{
-			"icon": "x-twitter",
-			"link": "https://x.com/YourM4tu"
+			"icon": "linkedin",
+			"link": "https://www.linkedin.com/in/kombil-alefay/"
 		},
 		{
-			"icon": "github",
-			"link": "https://github.com/project-kombil"
+			"icon": "x-twitter",
+			"link": "https://x.com/YourM4tu"
 		}
 	]
 }
