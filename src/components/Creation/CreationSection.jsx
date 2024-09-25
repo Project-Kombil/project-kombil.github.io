@@ -10,8 +10,8 @@ const CreationSection = ({ data }) => {
   const [modal, setModal] = useState(false);
   const [tempData, setTempData] = useState([]);
 
-  const getData = (imgLink, title, subTitle, link) => {
-    let tempData = [imgLink, title, subTitle, link];
+  const getData = (imgLink, title, subTitle, link, technology) => {
+    let tempData = [imgLink, title, subTitle, link, technology];
     setTempData((item) => [1, ...tempData]);
     setModal(true);
   };
@@ -74,6 +74,7 @@ const CreationSection = ({ data }) => {
           title={tempData[2]}
           subTitle={tempData[3]}
           link={tempData[4]}
+          technology={tempData[5]}
           modalClose={modalClose}
         />
       ) : (
