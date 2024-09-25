@@ -131,81 +131,70 @@
 		"creationItems": [
 			{
 				"imgLink": "./images/portfolio/bcpng.png",
-				"imgLinkLg": "./images/portfolio/portfolio6.jpg",
+				"imgLinkLg": "./images/portfolio/bcpng-home.webp",
 				"title": "Business Council of Papua New Guinea Website",
 				"subTitle": "Website Design and Development",
+				"link": "bcpng.org.pg",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "700"
 			},
 			{
 				"imgLink": "./images/portfolio/atlas-steel-png.png",
-				"imgLinkLg": "./images/portfolio/portfolio6.jpg",
+				"imgLinkLg": "./images/portfolio/atlas-steel-home.webp",
 				"title": "Atlas Steel PNG Website",
 				"subTitle": "Website Design and Development",
+				"link": "atlassteelpng.com.pg",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "700"
 			},
 			{
 				"imgLink": "./images/portfolio/phantom-development-limited.png",
-				"imgLinkLg": "./images/portfolio/portfolio6.jpg",
+				"imgLinkLg": "./images/portfolio/phantom-development-home.webp",
 				"title": "Phantom Development Limited",
 				"subTitle": "Website Design and Development",
+				"link": "phantomdevelopmentltd.com",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "700"
 			},
 			{
 				"imgLink": "./images/portfolio/abus-na-kumu.png",
-				"imgLinkLg": "./images/portfolio/portfolio1.jpg",
+				"imgLinkLg": "./images/portfolio/abus-na-kumu-home.webp",
 				"title": "Abus Na Kumu E-Commerce Website",
 				"subTitle": "Website Design and Development",
+				"link": "abusnakumu.com.pg",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "200"
 			},
 			{
 				"imgLink": "./images/portfolio/solar-solutions.png",
-				"imgLinkLg": "./images/portfolio/portfolio2.jpg",
+				"imgLinkLg": "./images/portfolio/solar-solutions-home.webp",
 				"title": "Solar Solutions Website",
 				"subTitle": "Website Design and Development",
+				"link": "solarsolutionspng.com",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "300"
 			},
 			{
 				"imgLink": "./images/portfolio/peta.png",
-				"imgLinkLg": "./images/portfolio/portfolio4_lg.jpg",
+				"imgLinkLg": "./images/portfolio/peta-home.webp",
 				"title": "PETA Sports Management Website",
 				"subTitle": "Website Development",
+				"link": "peta.com.pg",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "500"
 			},
 			{
-				"imgLink": "./images/portfolio/portfolio3.jpg",
-				"imgLinkLg": "./images/portfolio/portfolio3_lg.jpg",
-				"title": "Physique Gospel Support Center Website",
-				"subTitle": "Website Design and Development",
-				"effect": "fade-up",
-				"duration": "500",
-				"delay": "400"
-			},
-			{
-				"imgLink": "./images/portfolio/tour-niugini.png",
-				"imgLinkLg": "./images/portfolio/portfolio5_lg.jpg",
-				"title": "Tour Niugini Website",
-				"subTitle": "Website Design and Development",
-				"effect": "fade-up",
-				"duration": "500",
-				"delay": "600"
-			},
-			{
 				"imgLink": "./images/portfolio/crypto.png",
-				"imgLinkLg": "./images/portfolio/portfolio5_lg.jpg",
+				"imgLinkLg": "./images/portfolio/crypto-home.png",
 				"title": "Crypto Currency Trading Platform",
 				"subTitle": "Front-end Development",
+				"link": "#",
 				"effect": "fade-up",
 				"duration": "500",
 				"delay": "600"
