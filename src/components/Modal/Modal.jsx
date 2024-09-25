@@ -22,7 +22,7 @@ const Modal = ({ img, title, subTitle, link, modalClose }) => {
 						<div className="st-flex-center">
 							<img src={img} />
 						</div>
-						<a href={link} className="modal-subtitle"  target="_blank" rel="noopener noreferrer">{subTitle} - Link</a> 
+						<a href={link} className="modal-subtitle"  target="_blank" rel="noopener noreferrer">{subTitle}</a> 
 						
 					</div>
 				</div>
