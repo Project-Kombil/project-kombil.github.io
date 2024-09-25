@@ -1,6 +1,6 @@
 import "./Modal.scss";
 
-const Modal = ({ img, title, subTitle, link, modalClose }) => {
+const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
   const modalStyle = {
     backgroundColor: "rgba(0,0,0,0.8)",
     display: "block",
@@ -22,10 +22,20 @@ const Modal = ({ img, title, subTitle, link, modalClose }) => {
               <img src={img} alt={title}/>
             </div>
             <p className="modal-subtitle">{subTitle}</p>
+            <br />
+            <p className="modal-subtitle">Technologies Involved:</p>
+            {/* Mapping the array to a list */}
+            {technology && technology.length > 0 && (
+              <ul>
+                {technology.map((item, index) => (
+                  <li className="modal-subtitle" key={index}>{item}</li>  
+                ))}
+              </ul>
+            )}
              {link && link.trim() !== "" && (
               <a
                 href={link}
-                className="modal-subtitle"
+                className="modal-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
