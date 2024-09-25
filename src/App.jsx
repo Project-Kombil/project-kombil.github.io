@@ -8,56 +8,56 @@ import Layout from "./components/Layout/Layout";
 import ReactGA from "react-ga";
 
 function NotFound() {
-	useEffect(() => {
-		ReactGA.initialize("G-VX8LXY705E");
-		ReactGA.pageview(window.location.pathname + window.location.search);
-	}, []);
+  useEffect(() => {
+    ReactGA.initialize("G-VX8LXY705E");
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
-	const navigate = useNavigate();
+  const navigate = useNavigate();
 
-	useEffect(() => {
-		navigate("/", { replace: true });
-	}, [navigate]);
+  useEffect(() => {
+    navigate("/", { replace: true });
+  }, [navigate]);
 
-	return null;
+  return null;
 }
 
 function App() {
-	useEffect(() => {
-		Aos.init({ once: true });
+  useEffect(() => {
+    Aos.init({ once: true });
 
-		const handleScroll = () => {
-			ReactGA.event({
-				category: "Scroll",
-				action: "User Scrolled",
-			});
-		};
+    const handleScroll = () => {
+      ReactGA.event({
+        category: "Scroll",
+        action: "User Scrolled",
+      });
+    };
 
-		window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<Layout />}>
-					<Route
-						index
-						element={<Home />}
-						onStart={() => {
-							ReactGA.pageview(
-								window.location.pathname + window.location.search
-							);
-						}}
-					/>
-					<Route path="*" element={<NotFound to="/" />} />
-				</Route>
-			</Routes>
-		</BrowserRouter>
-	);
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route
+            index
+            element={<Home />}
+            onStart={() => {
+              ReactGA.pageview(
+                window.location.pathname + window.location.search
+              );
+            }}
+          />
+          <Route path="*" element={<NotFound to="/" />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
