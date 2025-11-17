@@ -1,8 +1,8 @@
-@import "../../sass/default/variable";
+@use "../../sass/default" as theme;
 
 .modal-title,
 .modal-subtitle {
-  color: $base-color4;
+  color: theme.$base-color4;
 }
 
 .modal-body img {
@@ -12,8 +12,6 @@
   border-radius: 10px;
 }
 
-.modal-link{
+.modal-link {
   color: blue;
 }
-
-

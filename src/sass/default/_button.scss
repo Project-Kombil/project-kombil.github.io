@@ -1,3 +1,5 @@
+@use 'variable' as *;
+
 /*--------------------------------------------------------------
 6. Button
 ----------------------------------------------------------------*/
@@ -54,12 +56,10 @@
 }
 
 .st-btn.st-style1.st-color5 {
-	background: linear-gradient(
-		45deg,
-		rgba(20, 70, 234, 1) 0%,
-		rgba(3, 220, 236, 1) 88%,
-		rgba(3, 220, 236, 1) 100%
-	);
+	background: linear-gradient(45deg,
+			rgba(20, 70, 234, 1) 0%,
+			rgba(3, 220, 236, 1) 88%,
+			rgba(3, 220, 236, 1) 100%);
 	color: #fff;
 }
 
@@ -95,6 +95,7 @@
 }
 
 @media screen and (max-width: 991px) {
+
 	.st-btn.st-style1,
 	.st-btn.st-style2 {
 		font-size: 14px;

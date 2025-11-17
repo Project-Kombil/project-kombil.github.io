@@ -1,4 +1,4 @@
-@import '../../sass/default/variable';
+@use "../../sass/default" as theme;
 
 .st-about-img {
   min-height: 550px;
@@ -18,7 +18,7 @@
   .st-text-block-subtitle {
     font-size: 24px;
     font-weight: 300;
-    color: $base-color1;
+    color: theme.$base-color1;
     margin-bottom: 18px;
   }
 

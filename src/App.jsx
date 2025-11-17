@@ -1,25 +1,24 @@
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { HashRouter, Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Home from "./pages/Home";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Layout from "./components/Layout/Layout";
-
 import ReactGA from "react-ga";
 
-function NotFound() {
+// Tracks page views on route change
+function GAListener({ children }) {
+  const location = useLocation();
+
   useEffect(() => {
     ReactGA.initialize("G-VX8LXY705E");
-    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
-  const navigate = useNavigate();
-
   useEffect(() => {
-    navigate("/", { replace: true });
-  }, [navigate]);
+    ReactGA.pageview(location.pathname + location.search);
+  }, [location]);
 
-  return null;
+  return children;
 }
 
 function App() {
@@ -34,29 +33,21 @@ function App() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route
-            index
-            element={<Home />}
-            onStart={() => {
-              ReactGA.pageview(
-                window.location.pathname + window.location.search
-              );
-            }}
-          />
-          <Route path="*" element={<NotFound to="/" />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <HashRouter>
+      <GAListener>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            {/* optional catch-all route if you ever add more pages */}
+            {/* <Route path="*" element={<Home />} /> */}
+          </Route>
+        </Routes>
+      </GAListener>
+    </HashRouter>
   );
 }
 

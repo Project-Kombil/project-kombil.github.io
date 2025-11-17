@@ -1,4 +1,4 @@
-@import '../../sass/default/variable';
+@use "../../sass/default" as theme;
 
 #st-alert {
   font-size: 15px;
@@ -21,20 +21,20 @@
 .st-form-field textarea {
   display: block;
   width: 100%;
-  color: $base-color2;
+  color: theme.$base-color2;
   padding: 12px 20px;
-  border: 1px solid $base-color4;
-  background-color: $dark-color4;
+  border: 1px solid theme.$base-color4;
+  background-color: theme.$dark-color4;
   height: 52px;
   border-radius: 7px;
   transition: all 0.4s ease;
 
   &::placeholder {
-    color: $dark-color5;
+    color: theme.$dark-color5;
   }
 
   &:focus {
-    border-color: $base-color1;
+    border-color: theme.$base-color1;
     outline: 0;
   }
 }
@@ -57,7 +57,7 @@
 
   &:hover {
     .st-icon-wrap {
-      border-color: $base-color1;
+      border-color: theme.$base-color1;
     }
   }
 
@@ -65,14 +65,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.5px solid $dark-color5;
+    border: 0.5px solid theme.$dark-color5;
     border-radius: 50%;
-    background-color: $dark-color2;
+    background-color: theme.$dark-color2;
     width: 50px;
     height: 50px;
     margin-right: 20px;
     transition: all 0.4s ease;
-    svg{
+
+    svg {
       scale: 1.1;
     }
   }
@@ -93,7 +94,7 @@
     margin-bottom: -2px;
 
     &:hover {
-      color: $base-color1;
+      color: theme.$base-color1;
     }
 
     &:last-child {
@@ -126,8 +127,8 @@
 .st-social-link {
   .st-social-btn {
     border-radius: 50px;
-    background-color: $dark-color2;
-    border: 0.5px solid $dark-color5;
+    background-color: theme.$dark-color2;
+    border: 0.5px solid theme.$dark-color5;
     transition: all 0.4s ease;
     overflow: hidden;
     display: flex;

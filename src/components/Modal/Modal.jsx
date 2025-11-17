@@ -26,7 +26,7 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
             </div>
             <p className="modal-subtitle">{subTitle}</p>
             <br />
-            <p className="modal-subtitle">Technologies Involved:</p>
+            <p className="modal-subtitle">Technologies Utilized:</p>
             {technology && technology.length > 0 && (
               <ul>
                 {technology.map((item, index) => (

@@ -1,4 +1,4 @@
-@import '../../sass/default/variable';
+@use "../../sass/default" as theme;
 
 .st-section-heading.st-style1 {
   text-align: center;
@@ -10,7 +10,7 @@
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
-    color: $base-color1;
+    color: theme.$base-color1;
     position: relative;
     z-index: 10;
     letter-spacing: 1px;
@@ -18,7 +18,7 @@
     &::before {
       content: "";
       position: absolute;
-      background-color: $dark-color5;
+      background-color: theme.$dark-color5;
       width: 170px;
       height: 2px;
       bottom: -16px;
@@ -29,7 +29,7 @@
     &::after {
       content: "";
       position: absolute;
-      background-color: $base-color1;
+      background-color: theme.$base-color1;
       width: 70px;
       height: 2px;
       bottom: -16px;
@@ -46,7 +46,7 @@
     transform: translateX(-50%);
     font-size: 90px;
     font-weight: 700;
-    color: rgba($dark-color1, 0.5);
+    color: rgba(theme.$dark-color1, 0.5);
     margin: 0;
     margin-top: -17px;
     width: 100%;
@@ -58,4 +58,3 @@
     display: none;
   }
 }
-

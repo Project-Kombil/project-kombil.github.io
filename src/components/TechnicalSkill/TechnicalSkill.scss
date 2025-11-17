@@ -1,11 +1,13 @@
-@import "../../sass/default/variable";
+@use "../../sass/default" as theme;
+
 .st-iconbox.st-style1 {
   text-align: center;
   padding: 50px 30px;
   border-radius: 3px;
   transition: all 0.4s ease;
-  border: 1px solid $base-color4;
-  background-color: $dark-color4;
+  border: 1px solid theme.$base-color4;
+  background-color: theme.$dark-color4;
+
   img {
     width: 52px;
     filter: grayscale(1);
@@ -15,14 +17,16 @@
 
   &:hover {
     .st-iconbox-icon {
-      border: 0.5px solid $base-color1;
+      border: 0.5px solid theme.$base-color1;
+
       img {
         filter: grayscale(0);
         opacity: 1;
       }
     }
+
     .st-iconbox-title {
-      color: $base-color1;
+      color: theme.$base-color1;
     }
   }
 
@@ -32,9 +36,9 @@
     justify-content: center;
     height: 90px;
     width: 90px;
-    border: 0.5px solid $dark-color5;
+    border: 0.5px solid theme.$dark-color5;
     border-radius: 50%;
-    background-color: $dark-color2;
+    background-color: theme.$dark-color2;
     margin: auto;
     font-size: 50px;
     margin-bottom: 28px;
@@ -42,7 +46,7 @@
 
     svg {
       width: 52px;
-      fill: $dark-color5;
+      fill: theme.$dark-color5;
       transition: all 0.4s ease;
     }
   }
