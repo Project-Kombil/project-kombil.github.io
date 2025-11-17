@@ -83,6 +83,9 @@ web_modules/
 .cache
 .parcel-cache
 
+# Vite cache
+.vite/
+
 # Next.js build output
 .next
 out
@@ -93,9 +96,7 @@ dist
 
 # Gatsby files
 .cache/
-# Comment in the public line in if your project uses Gatsby and not Next.js
-# https://nextjs.org/blog/next-9-1#public-directory-support
-# public
+# public (only uncomment if using Gatsby)
 
 # vuepress build output
 .vuepress/dist
@@ -119,7 +120,7 @@ dist
 # TernJS port file
 .tern-port
 
-# Stores VSCode versions used for testing VSCode extensions
+# Stores VSCode versions used for testing extensions
 .vscode-test
 
 # yarn v2
