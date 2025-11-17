@@ -1,4 +1,4 @@
-@import "../../sass/default/variable.scss";
+@use "../../sass/default" as theme;
 
 .st-site-header.st-style1 {
   transition: all 0.4s ease;
@@ -10,14 +10,15 @@
     justify-content: space-between;
     height: 80px;
   }
+
   &.st-transparent-header {
     background-color: transparent;
     box-shadow: none;
   }
 
   &.st-sticky-active {
-    background-color: rgba($dark-color2, 0.9);
-    box-shadow: 0 10px 10px -10px rgba($dark-color2, 0.9);
+    background-color: rgba(theme.$dark-color2, 0.9);
+    box-shadow: 0 10px 10px -10px rgba(theme.$dark-color2, 0.9);
   }
 }
 
@@ -27,7 +28,7 @@
   }
 
   .st-site-header.st-style1 {
-    background-color: $dark-color2;
+    background-color: theme.$dark-color2;
   }
 }
 
@@ -56,25 +57,25 @@
       display: flex !important;
       flex-wrap: wrap;
 
-      > li {
+      >li {
         margin-right: 40px;
 
         &:last-child {
           margin-right: 45px;
         }
 
-        > a {
+        >a {
           padding: 15px 0;
           font-size: 15px;
           display: inline-block;
-          color: $base-color3;
+          color: theme.$base-color3;
           text-transform: uppercase;
           font-family: "Roboto", sans-serif;
           font-weight: 500;
           cursor: pointer;
 
           &.active {
-            color: $base-color1;
+            color: theme.$base-color1;
           }
         }
       }
@@ -102,7 +103,7 @@
 
       .sp-phone-no {
         padding-left: 15px;
-        color: $base-color1;
+        color: theme.$base-color1;
       }
     }
   }
@@ -112,11 +113,13 @@
     display: none;
   }
 }
+
 @media screen and (max-width: 1199px) {
   .st-nav {
     .st-nav-list li:last-child {
       margin-right: 0;
     }
+
     .sp-phone {
       display: none;
     }
@@ -141,7 +144,7 @@
       transform: translate(-50%, -50%);
       height: 2px;
       width: 10px;
-      background-color: $base-color3;
+      background-color: theme.$base-color3;
       transition: all 0.3s ease;
     }
 
@@ -284,9 +287,9 @@
 @media screen and (min-width: 991px) {
   .st-site-header.st-style2 {
     width: 300px;
-    background: $dark-color2;
+    background: theme.$dark-color2;
     height: 100vh;
-    border-right: 1px solid $dark-color4;
+    border-right: 1px solid theme.$dark-color4;
     overflow: auto;
 
     .st-nav {
@@ -295,10 +298,10 @@
       .st-nav-list {
         flex-direction: column;
 
-        > li {
+        >li {
           margin-right: 0;
 
-          > a {
+          >a {
             padding: 10px 0;
           }
         }
@@ -316,7 +319,7 @@
         width: 299px;
         left: 0;
         bottom: 0;
-        background-color: $dark-color2;
+        background-color: theme.$dark-color2;
       }
     }
 
@@ -326,7 +329,7 @@
       left: 40px;
 
       li {
-        color: $dark-color3;
+        color: theme.$dark-color3;
         margin-right: 20px;
         font-size: 18px;
 
@@ -336,7 +339,7 @@
 
         a {
           &:hover {
-            color: $dark-color2;
+            color: theme.$dark-color2;
           }
         }
       }
@@ -375,6 +378,7 @@
 }
 
 @media screen and (max-width: 991px) {
+
   .st-site-header .st-btn,
   .st-site-header.st-style2 .st-opening-hr,
   .st-site-header.st-style2 .st-social-btn.st-style1 {
@@ -382,7 +386,7 @@
   }
 
   .st-site-header.st-style2 {
-    background-color: $dark-color2;
+    background-color: theme.$dark-color2;
     border-bottom: 1px solid #101624;
 
     .st-nav {

@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
 import "./Contact.scss";
 
+
 const Contact = ({ data, socialData }) => {
   const { title, text, subTitle } = data;
 

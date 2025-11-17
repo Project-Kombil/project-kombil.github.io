@@ -1,4 +1,4 @@
-@import '../../sass/default/variable';
+@use "../../sass/default" as theme;
 
 .st-resume-heading {
   display: flex;
@@ -17,16 +17,17 @@
   padding-top: 1px;
   margin-bottom: 50px;
   display: inline-block;
-  &:last-child{
+
+  &:last-child {
     margin-bottom: 0;
   }
 
   &::before {
     position: absolute;
     content: "";
-    border: 2px solid $base-color4;
+    border: 2px solid theme.$base-color4;
     border-radius: 50%;
-    background-color: $dark-color4;
+    background-color: theme.$dark-color4;
     width: 13px;
     height: 13px;
     top: 0px;
@@ -36,14 +37,14 @@
 
   &:hover {
     &::before {
-      background-color: $base-color1;
+      background-color: theme.$base-color1;
     }
   }
 
   .st-resume-timeline-title {
     font-size: 24px;
     font-weight: 400;
-    color: $base-color1;
+    color: theme.$base-color1;
     margin-top: -7px;
     margin-bottom: 8px;
   }
@@ -68,7 +69,7 @@
 .st-resume-timeline-wrap {
   padding-left: 40px;
   margin-left: 20px;
-  border-left: 1px solid $base-color4;
+  border-left: 1px solid theme.$base-color4;
 }
 
 @media only screen and (max-width:991px) {

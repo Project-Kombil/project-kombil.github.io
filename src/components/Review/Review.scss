@@ -1,13 +1,16 @@
-@import '../../sass/default/variable';
+@use "../../sass/default" as theme;
+
 .st-testimonial.st-style1 {
   &:hover {
     .st-testimonial-name {
-      color: $base-color1;
+      color: theme.$base-color1;
     }
+
     .st-testimonial-text {
-      border-color: $base-color1;
+      border-color: theme.$base-color1;
+
       &::after {
-        border-color: $base-color1;
+        border-color: theme.$base-color1;
       }
     }
   }
@@ -16,9 +19,9 @@
     position: relative;
     border-radius: 3px;
     transition: all 0.4s ease;
-    background-color: $dark-color4;
+    background-color: theme.$dark-color4;
     padding: 30px 15px;
-    border: 1px solid $base-color4;
+    border: 1px solid theme.$base-color4;
     margin-bottom: 40px;
 
     &::after {
@@ -28,9 +31,9 @@
       height: 30px;
       left: 50%;
       bottom: -16px;
-      border: 1px solid $base-color4;
+      border: 1px solid theme.$base-color4;
       border-width: 0 1px 1px 0;
-      background: $dark-color4;
+      background: theme.$dark-color4;
       transform: translateX(-50%) rotate(45deg);
       transition: all 0.4s ease;
     }
