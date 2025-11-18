@@ -11,7 +11,7 @@
     "imgLink": "./images/section/kombil.webp",
     "title": "Alefay Kombil",
     "subtitle": "Front-end Developer",
-    "text": "As a devoted Front-End Developer, I bring a robust background in UI/UX design. Proficient in modern technologies and diverse Content Management Tool. I apply my skills to create engaging digital experiences. With a foundation built on experience in the Hospitality and Tourism Industry, I prioritize user needs to deliver a seamless online journey. Recognized for my creative approach, attention to detail, and effective problem-solving skills, I am dedicated to continuous learning, always staying ahead of the curve with the latest tech trends.",
+    "text": "Front End Developer with experience across back end and API work, building complete and reliable web solutions using JavaScript, PHP, React, NextJS, NodeJS and CMS platforms. I turn ideas and wireframes into functional products that solve real business needs while applying practical UI/UX skills gained through hands on project work. My early career outside IT shaped the discipline and communication style I bring to tech today, and I continue to work with startups and small to medium businesses in Papua New Guinea to deliver modern and practical digital experiences as I grow in an evolving tech space.",
     "details": [
       {
         "title": "Email",
@@ -135,7 +135,13 @@
         "title": "Business Council of Papua New Guinea Website",
         "subTitle": "Website Redesign and Development",
         "link": "https://bcpng.org.pg",
-		"technology": ["Figma", "Adobe XD","WordPress","Vanilla Javascript", "CSS"],
+        "technology": [
+          "Figma",
+          "Adobe XD",
+          "WordPress",
+          "Vanilla Javascript",
+          "CSS"
+        ],
         "effect": "fade-up",
         "duration": "500",
         "delay": "700"
@@ -146,7 +152,7 @@
         "title": "Atlas Steel PNG Website",
         "subTitle": "Website Redesign and Development",
         "link": "https://atlassteelpng.com.pg",
-		"technology": ["Adobe XD","WordPress","Vanilla Javascript", "CSS"],
+        "technology": ["Adobe XD", "WordPress", "Vanilla Javascript", "CSS"],
         "effect": "fade-up",
         "duration": "500",
         "delay": "700"
@@ -157,7 +163,7 @@
         "title": "Phantom Development Limited",
         "subTitle": "Website Design and Development",
         "link": "https://phantomdevelopmentltd.com",
-		"technology": ["Adobe XD","WordPress","Vanilla Javascript", "CSS"],
+        "technology": ["Adobe XD", "WordPress", "Vanilla Javascript", "CSS"],
         "effect": "fade-up",
         "duration": "500",
         "delay": "700"
@@ -168,7 +174,7 @@
         "title": "Abus Na Kumu E-Commerce Website",
         "subTitle": "Website Design and Development",
         "link": "https://abusnakumu.com.pg",
-		"technology": ["Adobe XD","WordPress","Vanilla Javascript", "CSS"],
+        "technology": ["Adobe XD", "WordPress", "Vanilla Javascript", "CSS"],
         "effect": "fade-up",
         "duration": "500",
         "delay": "200"
@@ -179,7 +185,7 @@
         "title": "Solar Solutions Website",
         "subTitle": "Website Design and Development",
         "link": "https://solarsolutionspng.com",
-		"technology": ["Adobe XD","WordPress","Vanilla Javascript", "CSS"],
+        "technology": ["Adobe XD", "WordPress", "Vanilla Javascript", "CSS"],
         "effect": "fade-up",
         "duration": "500",
         "delay": "300"
@@ -190,7 +196,7 @@
         "title": "PETA Sports Management Website",
         "subTitle": "Website Design and Development",
         "link": "https://peta.com.pg",
-		"technology": ["Adobe XD","WordPress","Vanilla Javascript", "CSS"],
+        "technology": ["Adobe XD", "WordPress", "Vanilla Javascript", "CSS"],
         "effect": "fade-up",
         "duration": "500",
         "delay": "500"
@@ -200,7 +206,7 @@
         "imgLinkLg": "./images/portfolio/crypto-home.png",
         "title": "Crypto Currency Trading Platform",
         "subTitle": "Front-end Development",
-		"technology": ["React", "Grommet UI", "Vanilla Javascript", "CSS"],
+        "technology": ["React", "Grommet UI", "Vanilla Javascript", "CSS"],
         "link": "",
         "effect": "fade-up",
         "duration": "500",
@@ -276,16 +282,22 @@
     "experienceTitle": "Experience",
     "experience": [
       {
-        "title": "Lead Front-end Developer",
-        "duration": "Sep 2022 - Present",
-        "subTitle": "Be Pacific Digital Agency, National Capital District",
-        "text": "Liased with senior stakeholders to convert business requirements into technical specifications. I have crafted detailed plans and documentation for system design and feature implementation, aligning with business objectives. Took the lead in designing and implementing applications that met specific business processes and requirements, enhancing operational efficiency. Additionally, I have implemented designs that led to a significant increase in user engagement, enhancing the overall user experience and satisfaction."
+        "title": "Tech Developer",
+        "duration": "May 2025 - Present",
+        "subTitle": "Alef Solutions, National Capital District",
+        "text": "I worked on Attendo, an event management SaaS built to handle registrations and check-ins for real events. My role was designing and building the front end with JSX, React and Node while also helping with some backend tasks during the pilot rollout. I handled deployments and integrations through AWS, Resend and Vercel to keep things stable for users. I also built the Alef Solutions website and look after client sites, keeping them updated, fixing bugs and improving layouts and content across CMS platforms including BCPNG and Abus na Kumu. I contributed to Lev Tziyon as well, using Figma and Adobe XD to turn ideas into working screens."
       },
       {
-        "title": "Front-end Developer",
-        "duration": "Mar 2022 - Aug 2022",
+        "title": "Lead Fullstack Developer (previously Fullstack Developer)",
+        "duration": "March 2022 - Oct 2025",
         "subTitle": "Be Pacific Digital Agency, National Capital District",
-        "text": "I worked closely with my supervisor to translate requirements into technical specifications. I created detailed plans and documentation for system design and feature implementation, ensuring alignment with business objectives. I resolved bugs and assisted in implement designs that led to a significant increase in user engagement, improving the overall user experience and satisfaction."
+        "text": "I led the development of client websites and web apps, working across both front end and back end while keeping projects moving from design to deployment. I worked mainly with React, PHP and CMS platforms to rebuild and improve websites for clients including the Business Council of Papua New Guinea and Atlas Steel, upgrading security and adding new features along the way. I introduced Git and project tracking to make collaboration easier and reduce rework, and I also set up Google Analytics and Data Studio reporting so the agency and clients could understand website performance and make informed improvements."
+      },
+      {
+        "title": "Freelance Developer",
+        "duration": "2023 - 2024",
+        "subTitle": "Freelance, National Capital District",
+        "text": "I worked directly with clients to design, develop and host their websites from start to finish, including Phantom Development Limited and PETA Sports Management. I set up emails and hosting environments for both companies and handled the full rollout, which meant turning their ideas into working interfaces and then keeping everything running smoothly after launch."
       },
       {
         "title": "Junior Software Engineer Intern",

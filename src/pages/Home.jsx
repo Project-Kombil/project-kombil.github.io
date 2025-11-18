@@ -10,6 +10,7 @@ import Hero from "../components/Hero/Hero";
 
 const Home = () => {
   const {
+    // skillData,
     heroData,
     aboutData,
     serviceData,
