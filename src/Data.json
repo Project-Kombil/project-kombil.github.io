@@ -30,33 +30,9 @@
   "serviceData": {
     "services": [
       {
-        "imgLink": "./images/icon/uiux.png",
-        "title": "UI/UX Design",
-        "text": "Create a sleek and intuitive UI/UX design that seamlessly showcases client's work and captivates visitors with an engaging user experience.",
-        "effect": "zoom-out-up",
-        "duration": "500",
-        "delay": "300"
-      },
-      {
-        "imgLink": "./images/icon/design.png",
-        "title": "Responsive Design",
-        "text": "Implement a responsive design approach, ensuring seamless user experiences across various devices, and showcasing  accessibility and user satisfaction in applications.",
-        "effect": "zoom-out-up",
-        "duration": "500",
-        "delay": "700"
-      },
-      {
-        "imgLink": "./images/icon/prototyping.png",
-        "title": "Prototyping",
-        "text": "Enable client collaboration with a streamlined prototyping process, offering previews and feedback before application development.",
-        "effect": "zoom-out-up",
-        "duration": "500",
-        "delay": "200"
-      },
-      {
         "imgLink": "./images/icon/react.png",
         "title": "React",
-        "text": "Delivering dynamic and responsive user interfaces that elevate digital experiences with ReactJS.",
+        "text": "Build fast and responsive user interfaces with reusable components and smooth interaction handling using React.",
         "effect": "zoom-out-up",
         "duration": "500",
         "delay": "400"
@@ -64,18 +40,42 @@
       {
         "imgLink": "./images/icon/javascript.png",
         "title": "Vanilla Javascript",
-        "text": "Utilize Vanilla JavaScript to create seamless and dynamic applications, enhancing user interactions.",
+        "text": "Write clean JavaScript for dynamic features, form logic and UI behavior without relying on heavy frameworks.",
         "effect": "zoom-out-up",
         "duration": "500",
         "delay": "600"
       },
       {
-        "imgLink": "./images/icon/wordpress.png",
-        "title": "WordPress",
-        "text": "Deliver user-friendly and scalable websites that seamlessly integrate functionality with a captivating user experience, leveraging Content Management Systems such as WordPress",
+        "imgLink": "./images/icon/nextjs.png",
+        "title": "NextJS",
+        "text": "Develop production-ready React applications with built-in routing, API routes and server-side rendering for performance.",
+        "effect": "zoom-out-up",
+        "duration": "500",
+        "delay": "300"
+      },
+      {
+        "imgLink": "./images/icon/nodejs.png",
+        "title": "NodeJS",
+        "text": "Handle backend logic and API operations using JavaScript on the server to support full-stack application features.",
+        "effect": "zoom-out-up",
+        "duration": "500",
+        "delay": "700"
+      },
+      {
+        "imgLink": "./images/icon/php.png",
+        "title": "PHP",
+        "text": "Create reliable backend functionality and custom features for web applications and CMS platforms, supporting real business workflows.",
         "effect": "zoom-out-up",
         "duration": "500",
         "delay": "500"
+      },
+      {
+        "imgLink": "./images/icon/design.png",
+        "title": "Design",
+        "text": "Turn ideas into practical interface layouts using Figma or Adobe XD, keeping usability and clarity at the core of every screen.",
+        "effect": "zoom-out-up",
+        "duration": "500",
+        "delay": "200"
       }
     ]
   },
@@ -130,6 +130,34 @@
   "creationData": {
     "creationItems": [
       {
+        "imgLink": "./images/portfolio/attendo.png",
+        "imgLinkLg": "./images/portfolio/attendo.webp",
+        "title": "Attendo",
+        "subTitle": "Design and Development",
+        "link": "http://attendo.services",
+        "technology": ["Adobe XD", "React", "NextJS", "NodeJS", "AWS"],
+        "effect": "fade-up",
+        "duration": "500",
+        "delay": "700"
+      },
+      {
+        "imgLink": "./images/portfolio/alef-solutions.png",
+        "imgLinkLg": "./images/portfolio/alef-solutions.webp",
+        "title": "Alef Solutions",
+        "subTitle": "Website Design and Development",
+        "link": "https://alefsolutions.tech",
+        "technology": [
+          "Adobe XD",
+          "WordPress",
+          "PHP",
+          "Vanilla Javascript",
+          "CSS"
+        ],
+        "effect": "fade-up",
+        "duration": "500",
+        "delay": "700"
+      },
+      {
         "imgLink": "./images/portfolio/bcpng.png",
         "imgLinkLg": "./images/portfolio/bcpng-home.webp",
         "title": "Business Council of Papua New Guinea Website",
@@ -152,6 +180,17 @@
         "title": "Atlas Steel PNG Website",
         "subTitle": "Website Redesign and Development",
         "link": "https://atlassteelpng.com.pg",
+        "technology": ["Adobe XD", "WordPress", "Vanilla Javascript", "CSS"],
+        "effect": "fade-up",
+        "duration": "500",
+        "delay": "700"
+      },
+      {
+        "imgLink": "./images/portfolio/lev-tziyon.png",
+        "imgLinkLg": "./images/portfolio/lev-tziyon.webp",
+        "title": "Lev Tziyon",
+        "subTitle": "Website Design and Development",
+        "link": "https://levtziyon.com",
         "technology": ["Adobe XD", "WordPress", "Vanilla Javascript", "CSS"],
         "effect": "fade-up",
         "duration": "500",
