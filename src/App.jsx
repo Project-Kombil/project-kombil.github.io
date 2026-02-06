@@ -15,6 +15,19 @@ function GAListener({ children }) {
   useEffect(() => {
     if (!gaId) return;
     if (!initializedRef.current) {
+      if (!window.gtag) {
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag() {
+          window.dataLayer.push(arguments);
+        };
+        window.gtag("js", new Date());
+        window.gtag("config", gaId, { send_page_view: false });
+      }
       ReactGA.initialize(gaId);
       initializedRef.current = true;
     }
