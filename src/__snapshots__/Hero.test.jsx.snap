@@ -1,0 +1,54 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Hero > renders title text and author image 1`] = `
+<DocumentFragment>
+  <section
+    class="st-hero st-style2 st-bg st-dynamic-bg st-ripple-version"
+    id="home"
+    style="background-image: url("/images/hero-bg.jpg"); background-size: cover; background-position: center;"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="st-hero-text"
+      >
+        <div
+          class="st-author"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
+          <img
+            alt="Author Image"
+            src="/images/author.jpg"
+          />
+        </div>
+        <h1
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="800"
+        >
+          Hello 
+          <span>
+            World
+          </span>
+        </h1>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-duration="800"
+        >
+          Frontend developer.
+        </p>
+        <div
+          class="st-hero-social-links"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="800"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

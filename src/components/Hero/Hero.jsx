@@ -14,6 +14,7 @@ const Hero = ({ data, socialData }) => {
     let isMounted = true;
 
     const initVanta = async () => {
+      if (import.meta.env.MODE === "test" || import.meta.env.VITEST) return;
       if (!vantaRef.current || vantaEffectRef.current) return;
       window.THREE = THREE;
       const { default: DOTS } = await import("vanta/dist/vanta.dots.min");

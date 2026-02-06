@@ -1,5 +1,7 @@
 # Alefay Kombil's Online Portfolio
 
+[![Lint and Test](https://github.com/project-kombil/project-kombil.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/project-kombil/project-kombil.github.io/actions/workflows/ci.yml)
+
 Welcome to my online portfolio! I'm Alefay Kombil, a front-end developer specializing in UI/UX design. This repository hosts the code for my personal portfolio website, where I showcase my skills, projects, and experiences.
 
 ## About Me
