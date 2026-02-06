@@ -15,13 +15,20 @@ const Hero = ({ data, socialData }) => {
 
     const initVanta = async () => {
       if (import.meta.env.MODE === "test" || import.meta.env.VITEST) return;
+      const prefersReducedMotion =
+        window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (prefersReducedMotion) return;
+
+      const isSmallScreen =
+        window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
       if (!vantaRef.current || vantaEffectRef.current) return;
       window.THREE = THREE;
       const { default: DOTS } = await import("vanta/dist/vanta.dots.min");
       if (!isMounted || !vantaRef.current) return;
       vantaEffectRef.current = DOTS({
         el: vantaRef.current,
-        mouseControls: true,
+        mouseControls: !isSmallScreen,
         touchControls: true,
         gyroControls: false,
         minHeight: 200.0,
@@ -31,8 +38,8 @@ const Hero = ({ data, socialData }) => {
         color: 0x44f8fe,
         color2: 0x0a101e,
         backgroundColor: 0x070d1b,
-        size: 3.0,
-        spacing: 34.0,
+        size: isSmallScreen ? 2.4 : 3.0,
+        spacing: isSmallScreen ? 48.0 : 34.0,
         showLines: false,
       });
     };
@@ -67,7 +74,13 @@ const Hero = ({ data, socialData }) => {
             data-aos-duration="800"
             data-aos-delay="200"
           >
-            <img src={imgAuthor} alt="Author Image" />
+            <img
+              src={imgAuthor}
+              alt="Author Image"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
           </div>
           <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
             {perser(title)}

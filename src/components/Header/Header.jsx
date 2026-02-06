@@ -17,7 +17,12 @@ const Header = () => {
           <div className="st-main-header-in">
             <div className="st-main-header-left">
               <div className="st-header-author">
-                <img src="images/section/hero-img.jpg" alt="author image" />
+                <img
+                  src="images/section/hero-img.jpg"
+                  alt="author image"
+                  loading="eager"
+                  decoding="async"
+                />
               </div>
             </div>
             <div className="st-main-header-right">

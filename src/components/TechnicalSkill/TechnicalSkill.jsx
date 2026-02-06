@@ -20,7 +20,12 @@ const TechnicalSkill = ({ data }) => {
             >
               <div className={`st-iconbox st-style1`}>
                 <div className="st-iconbox-icon">
-                  <img src={element.imgLink} alt="Icon" />
+                  <img
+                    src={element.imgLink}
+                    alt="Icon"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <h2 className="st-iconbox-title">{element.title}</h2>
                 <div className="st-iconbox-text">{element.text}</div>

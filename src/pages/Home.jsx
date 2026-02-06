@@ -1,12 +1,18 @@
+import { Suspense, lazy } from "react";
 import data from "../Data.json";
-import About from "../components/About/About";
-import TechnicalSkill from "../components/TechnicalSkill/TechnicalSkill";
-// import Skill from "../components/Skill/Skill";
-import PortfolioSection from "../components/Portfolio/PortfolioSection";
-// import ReviewSection from "../components/Review/ReviewSection";
-import Contact from "../components/Contact/Contact";
-import CreationSection from "../components/Creation/CreationSection";
 import Hero from "../components/Hero/Hero";
+
+const About = lazy(() => import("../components/About/About"));
+const TechnicalSkill = lazy(
+  () => import("../components/TechnicalSkill/TechnicalSkill")
+);
+const PortfolioSection = lazy(
+  () => import("../components/Portfolio/PortfolioSection")
+);
+const Contact = lazy(() => import("../components/Contact/Contact"));
+const CreationSection = lazy(
+  () => import("../components/Creation/CreationSection")
+);
 
 const Home = () => {
   const {
@@ -23,17 +29,27 @@ const Home = () => {
   return (
     <>
       <Hero data={heroData.data} socialData={socialData2} />
-      <About data={aboutData} data-aos="fade-right" />
-      <TechnicalSkill data={serviceData} data-aos="fade-right" />
-      <PortfolioSection data={portfolioData} />
-      <CreationSection data={creationData} data-aos="fade-right" />
+      <Suspense fallback={null}>
+        <About data={aboutData} data-aos="fade-right" />
+      </Suspense>
+      <Suspense fallback={null}>
+        <TechnicalSkill data={serviceData} data-aos="fade-right" />
+      </Suspense>
+      <Suspense fallback={null}>
+        <PortfolioSection data={portfolioData} />
+      </Suspense>
+      <Suspense fallback={null}>
+        <CreationSection data={creationData} data-aos="fade-right" />
+      </Suspense>
       {/* <Skill data={skillData} data-aos="fade-right" /> */}
       {/* <ReviewSection data={reviewData} data-aos="fade-right" /> */}
-      <Contact
-        data={contactData}
-        socialData={socialData}
-        data-aos="fade-right"
-      />
+      <Suspense fallback={null}>
+        <Contact
+          data={contactData}
+          socialData={socialData}
+          data-aos="fade-right"
+        />
+      </Suspense>
     </>
   );
 };

@@ -28,7 +28,12 @@ const SingleCreation = ({ data, getData }) => {
         <div className="st-portfolio-item">
           <div className="st-portfolio st-zoom">
             <div className="st-portfolio-img st-zoom-in">
-              <img src={imgLink} alt="portfolio" />
+              <img
+                src={imgLink}
+                alt="portfolio"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="st-portfolio-item-hover">
               {/* <Icon icon="mdi:eye" /> */}
