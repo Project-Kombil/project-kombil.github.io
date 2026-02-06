@@ -46,7 +46,11 @@ function GAListener({ children }) {
 
 function App() {
   useEffect(() => {
-    Aos.init({ once: true });
+    const prefersReducedMotion =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    Aos.init({ once: true, disable: prefersReducedMotion });
 
     let sentFirstScroll = false;
     const handleScroll = () => {

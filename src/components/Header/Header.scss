@@ -407,3 +407,23 @@
     border: 2px solid rgba(255, 255, 255, 0.1);
   }
 }
+
+.skip-link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transform: translateY(-150%);
+  padding: 10px 14px;
+  background: theme.$base-color1;
+  color: theme.$dark-color2;
+  border-radius: 6px;
+  font-weight: 600;
+  z-index: 999;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+
+  &:focus,
+  &:focus-visible {
+    transform: translateY(0);
+  }
+}

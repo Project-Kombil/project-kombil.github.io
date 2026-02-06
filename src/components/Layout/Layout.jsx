@@ -20,7 +20,9 @@ const Layout = () => {
       ) : (
         <div className="st-get-sidebar">
           <Header />
-          <Outlet />
+          <main id="main-content">
+            <Outlet />
+          </main>
           <Footer />
         </div>
       )}

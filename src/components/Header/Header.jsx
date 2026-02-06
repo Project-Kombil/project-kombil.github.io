@@ -12,6 +12,9 @@ const Header = () => {
 
   return (
     <header className="st-site-header st-sticky-header st-style2">
+      <a href="#main-content" className="skip-link">
+        Skip to content
+      </a>
       <div className="st-main-header">
         <div className="container">
           <div className="st-main-header-in">

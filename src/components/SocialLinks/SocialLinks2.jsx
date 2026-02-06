@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
-import { Link } from "react-router-dom";
-
 const SocialLinks2 = ({ data }) => {
   return (
     <div
@@ -11,11 +9,19 @@ const SocialLinks2 = ({ data }) => {
       data-aos-delay="500"
     >
       {data.map((item, index) => (
-        <Link to={item.link} className="st-social-btn" key={index}>
+        <a
+          href={item.link}
+          className="st-social-btn"
+          aria-label={item.title || item.icon}
+          title={item.title || item.icon}
+          target="_blank"
+          rel="noopener noreferrer"
+          key={index}
+        >
           <span className="st-social-icon">
             <Icon icon={`fa6-brands:${item.icon}`} />
           </span>
-        </Link>
+        </a>
       ))}
     </div>
   );
