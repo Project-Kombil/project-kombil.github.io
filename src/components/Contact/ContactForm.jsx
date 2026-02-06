@@ -20,6 +20,10 @@ const ContactForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    if (form.current.company && form.current.company.value) {
+      return;
+    }
+
     const sanitizedData = {
       name: sanitizeInput(form.current.user_name.value),
       email: sanitizeInput(form.current.user_email.value),
@@ -97,10 +101,21 @@ const ContactForm = () => {
         name="contact"
         method="POST"
         data-netlify="true"
+        data-netlify-honeypot="company"
         className="st-contact-form"
         id="contact-form"
         onSubmit={sendEmail}
       >
+        <div className="hp-field" aria-hidden="true">
+          <label htmlFor="company">Company</label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            tabIndex="-1"
+            autoComplete="off"
+          />
+        </div>
         <div className="st-form-field">
           <input
             type="text"
