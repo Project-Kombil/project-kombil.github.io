@@ -38,4 +38,14 @@ export default [
       ],
     },
   },
+  {
+    files: ["**/*.test.{js,jsx}", "**/*.spec.{js,jsx}"],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.vitest,
+      },
+    },
+  },
 ];
