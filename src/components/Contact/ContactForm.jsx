@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import "sweetalert2/src/sweetalert2.scss";
 
-const ContactForm = () => {
+export const ContactForm = () => {
   const form = useRef();
 
   const sanitizeInput = (input) => {
