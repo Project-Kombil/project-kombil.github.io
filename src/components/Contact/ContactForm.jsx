@@ -45,9 +45,25 @@ const ContactForm = () => {
       },
     });
 
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      Swal.fire({
+        icon: "error",
+        text: "Email service is not configured. Please try again later.",
+        showCloseButton: true,
+        showConfirmButton: false,
+        background: "#fdfeff",
+        timer: 3000,
+      });
+      return;
+    }
+
     emailjs
-      .send("service_pi0tvte", "contact_form#1", sanitizedData, {
-        publicKey: "g-XDVTa4LtET-EtIf",
+      .send(serviceId, templateId, sanitizedData, {
+        publicKey,
       })
       .then(
         () => {
