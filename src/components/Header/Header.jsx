@@ -21,7 +21,7 @@ const Header = () => {
             <div className="st-main-header-left">
               <div className="st-header-author">
                 <img
-                  src="images/section/hero-img_webp.webp"
+                  src="/images/section/hero-img_webp.webp"
                   alt="author image"
                   width="800"
                   height="800"
@@ -34,6 +34,7 @@ const Header = () => {
               <div className="st-nav">
                 <ul
                   className="st-nav-list st-onepage-nav"
+                  id="primary-navigation"
                   style={{ display: `${mobileToggle ? "block" : "none"}` }}
                 >
                   <li>
@@ -97,14 +98,18 @@ const Header = () => {
                     </ScrollLink>
                   </li>
                 </ul>
-                <div
+                <button
+                  type="button"
                   className={`st-munu-toggle ${
                     mobileToggle ? "st-toggle-active" : ""
                   } `}
                   onClick={handleToggleMenu}
+                  aria-expanded={mobileToggle}
+                  aria-controls="primary-navigation"
+                  aria-label="Toggle menu"
                 >
                   <span></span>
-                </div>
+                </button>
                 <div className="st-height-b20 st-height-lg-b20"></div>
               </div>
             </div>

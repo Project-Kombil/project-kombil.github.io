@@ -33,7 +33,14 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
           </div>
           <div className="modal-body">
             <div className="st-flex-center">
-              <img src={img} alt={title} loading="lazy" decoding="async" />
+              <img
+                src={img}
+                alt={title}
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <p className="modal-subtitle">{subTitle}</p>
             <br />

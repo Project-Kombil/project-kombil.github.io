@@ -20,14 +20,16 @@ const Carousel = ({ data }) => {
     return (
       <Slider {...sliderSetting}>
         {sliderImages.map((item, index) => (
-          <img
-            src={item.imgLink}
-            key={index}
-            alt=""
-            loading="lazy"
-            decoding="async"
-          />
-        ))}
+					<img
+						src={item.imgLink}
+						key={index}
+						alt=""
+						width={item.width}
+						height={item.height}
+						loading="lazy"
+						decoding="async"
+					/>
+				))}
       </Slider>
     );
   } else {

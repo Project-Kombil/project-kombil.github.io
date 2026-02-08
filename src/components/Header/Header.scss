@@ -57,14 +57,14 @@
       display: flex !important;
       flex-wrap: wrap;
 
-      >li {
+      > li {
         margin-right: 40px;
 
         &:last-child {
           margin-right: 45px;
         }
 
-        >a {
+        > a {
           padding: 15px 0;
           font-size: 15px;
           display: inline-block;
@@ -201,6 +201,9 @@
     height: 27px;
     margin: 15px 0px 15px 0px;
     cursor: pointer;
+    background: none;
+    border: 0;
+    padding: 0;
 
     span,
     span:before,
@@ -214,7 +217,6 @@
     span {
       margin: 0 auto;
       position: relative;
-      top: 12px;
       transition-duration: 0s;
       transition-delay: 0.2s;
 
@@ -298,10 +300,10 @@
       .st-nav-list {
         flex-direction: column;
 
-        >li {
+        > li {
           margin-right: 0;
 
-          >a {
+          > a {
             padding: 10px 0;
           }
         }
@@ -378,7 +380,6 @@
 }
 
 @media screen and (max-width: 991px) {
-
   .st-site-header .st-btn,
   .st-site-header.st-style2 .st-opening-hr,
   .st-site-header.st-style2 .st-social-btn.st-style1 {
