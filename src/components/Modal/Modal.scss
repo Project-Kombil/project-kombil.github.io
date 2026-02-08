@@ -5,6 +5,15 @@
   color: theme.$base-color4;
 }
 
+.modal-content {
+  background-color: theme.$dark-color4;
+  border: 1px solid theme.$base-color4;
+}
+
+.modal-header {
+  border-bottom: 1px solid theme.$base-color4;
+}
+
 .modal-body img {
   width: 100%;
   margin-bottom: 20px;

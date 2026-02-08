@@ -4,6 +4,10 @@
 	display: block;
 	position: relative;
 	margin-bottom: 30px;
+	background-color: theme.$dark-color4;
+	border: 1px solid theme.$base-color4;
+	border-radius: 3px;
+	overflow: hidden;
 
 	&:hover {
 		cursor: pointer;

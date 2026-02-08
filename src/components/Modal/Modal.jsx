@@ -1,14 +1,6 @@
 import "./Modal.scss";
 
-const Modal = ({
-  img,
-  imgFallback,
-  title,
-  subTitle,
-  link,
-  technology,
-  modalClose,
-}) => {
+const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
   const modalStyle = {
     backgroundColor: "rgba(0,0,0,0.8)",
     display: "block",
@@ -30,19 +22,7 @@ const Modal = ({
           </div>
           <div className="modal-body">
             <div className="st-flex-center">
-              {imgFallback && img && img.endsWith(".webp") ? (
-                <picture>
-                  <source srcSet={img} type="image/webp" />
-                  <img
-                    src={imgFallback}
-                    alt={title}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-              ) : (
-                <img src={img} alt={title} loading="lazy" decoding="async" />
-              )}
+              <img src={img} alt={title} loading="lazy" decoding="async" />
             </div>
             <p className="modal-subtitle">{subTitle}</p>
             <br />
