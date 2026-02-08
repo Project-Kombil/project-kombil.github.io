@@ -84,18 +84,6 @@ const Header = () => {
                       Creations
                     </ScrollLink>
                   </li>
-                  {/* <li>
-										<ScrollLink
-											to="skills"
-											spy={true}
-											smooth={true}
-											offset={-40}
-											duration={500}
-											onClick={() => setMobileToggle(false)}
-										>
-											Skills
-										</ScrollLink>
-									</li> */}
                   <li>
                     <ScrollLink
                       to="contact"

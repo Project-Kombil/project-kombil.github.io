@@ -79,54 +79,6 @@
       }
     ]
   },
-  "skillData": {
-    "title": "All the skills that I have in that field of work are mentioned.",
-    "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.",
-    "skills": [
-      {
-        "title": "UI Design",
-        "progress": "80%",
-        "effect": "fade-up",
-        "duration": "500",
-        "delay": "200"
-      },
-      {
-        "title": "UX Design",
-        "progress": "90%",
-        "effect": "fade-up",
-        "duration": "500",
-        "delay": "300"
-      },
-      {
-        "title": "Adobe XD",
-        "progress": "70%",
-        "effect": "fade-up",
-        "duration": "500",
-        "delay": "400"
-      },
-      {
-        "title": "JavaScript",
-        "progress": "70%",
-        "effect": "fade-up",
-        "duration": "500",
-        "delay": "500"
-      },
-      {
-        "title": "React",
-        "progress": "70%",
-        "effect": "fade-up",
-        "duration": "500",
-        "delay": "600"
-      },
-      {
-        "title": "Content Management Systems",
-        "progress": "90%",
-        "effect": "fade-up",
-        "duration": "500",
-        "delay": "700"
-      }
-    ]
-  },
   "creationData": {
     "creationItems": [
       {

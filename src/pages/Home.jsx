@@ -1,7 +1,7 @@
 import { Suspense, lazy } from "react";
 import data from "../Data.json";
 import Hero from "../components/Hero/Hero";
-import ReviewSection from "../components/Review/ReviewSection";
+// import ReviewSection from "../components/Review/ReviewSection";
 
 const About = lazy(() => import("../components/About/About"));
 const TechnicalSkill = lazy(
@@ -22,7 +22,7 @@ const Home = () => {
     serviceData,
     creationData,
     portfolioData,
-    reviewData,
+    // reviewData,
     contactData,
     socialData,
     socialData2,
