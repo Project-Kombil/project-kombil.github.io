@@ -21,7 +21,7 @@ const Header = () => {
             <div className="st-main-header-left">
               <div className="st-header-author">
                 <img
-                  src="images/section/hero-img.jpg"
+                  src="images/section/hero-img_webp.webp"
                   alt="author image"
                   width="800"
                   height="800"

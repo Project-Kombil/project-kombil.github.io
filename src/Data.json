@@ -1,7 +1,7 @@
 {
   "heroData": {
     "data": {
-      "imgAuthor": "./images/section/hero-img.jpg",
+      "imgAuthor": "./images/section/hero-img_webp.webp",
       "bgImgLink": "./images/background/hero-bg.jpg",
       "title": "Hi, I am <span>Alefay Kombil</span>",
       "text": "Frontend developer with a passion for UI/UX design. I build beautiful and functional user interfaces with React and other frontend technologies."
