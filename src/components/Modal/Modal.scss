@@ -5,8 +5,26 @@
   color: theme.$base-color4;
 }
 
+.st-modal {
+  opacity: 0;
+  animation: st-modal-fade-in 0.22s ease forwards;
+}
+
+.st-modal .modal-dialog {
+  transform: translateY(10px) scale(0.98);
+  animation: st-modal-pop-in 0.22s ease forwards;
+}
+
+.st-modal.st-modal-closing {
+  animation: st-modal-fade-out 0.2s ease forwards;
+}
+
+.st-modal.st-modal-closing .modal-dialog {
+  animation: st-modal-pop-out 0.2s ease forwards;
+}
+
 .modal-content {
-  background-color: theme.$dark-color4;
+  background-color: theme.$base-color3;
   border: 1px solid theme.$base-color4;
 }
 
@@ -22,5 +40,50 @@
 }
 
 .modal-link {
-  color: blue;
+  color: darkblue;
+}
+
+@keyframes st-modal-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes st-modal-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes st-modal-pop-in {
+  from {
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes st-modal-pop-out {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .st-modal,
+  .st-modal .modal-dialog,
+  .st-modal.st-modal-closing,
+  .st-modal.st-modal-closing .modal-dialog {
+    animation: none;
+  }
 }

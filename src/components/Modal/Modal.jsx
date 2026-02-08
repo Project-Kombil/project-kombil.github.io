@@ -1,13 +1,24 @@
+import { useState } from "react";
 import "./Modal.scss";
 
 const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
+  const [isClosing, setIsClosing] = useState(false);
   const modalStyle = {
     backgroundColor: "rgba(0,0,0,0.8)",
     display: "block",
   };
+
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      modalClose();
+    }, 220);
+  };
   return (
     <div
-      className="modal show fade bd-example-modal-lg modal"
+      className={`modal show fade bd-example-modal-lg modal st-modal ${
+        isClosing ? "st-modal-closing" : "st-modal-open"
+      }`}
       style={modalStyle}
     >
       <div className="modal-dialog modal-lg modal-dialog-centered">
@@ -17,7 +28,7 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
             <button
               type="button"
               className="btn-close"
-              onClick={modalClose}
+              onClick={handleClose}
             ></button>
           </div>
           <div className="modal-body">
