@@ -1,27 +1,28 @@
 import { Suspense, lazy } from "react";
 import data from "../Data.json";
 import Hero from "../components/Hero/Hero";
+import ReviewSection from "../components/Review/ReviewSection";
 
 const About = lazy(() => import("../components/About/About"));
 const TechnicalSkill = lazy(
-  () => import("../components/TechnicalSkill/TechnicalSkill")
+  () => import("../components/TechnicalSkill/TechnicalSkill"),
 );
 const PortfolioSection = lazy(
-  () => import("../components/Portfolio/PortfolioSection")
+  () => import("../components/Portfolio/PortfolioSection"),
 );
 const Contact = lazy(() => import("../components/Contact/Contact"));
 const CreationSection = lazy(
-  () => import("../components/Creation/CreationSection")
+  () => import("../components/Creation/CreationSection"),
 );
 
 const Home = () => {
   const {
-    // skillData,
     heroData,
     aboutData,
     serviceData,
     creationData,
     portfolioData,
+    reviewData,
     contactData,
     socialData,
     socialData2,
@@ -41,7 +42,6 @@ const Home = () => {
       <Suspense fallback={null}>
         <CreationSection data={creationData} data-aos="fade-right" />
       </Suspense>
-      {/* <Skill data={skillData} data-aos="fade-right" /> */}
       {/* <ReviewSection data={reviewData} data-aos="fade-right" /> */}
       <Suspense fallback={null}>
         <Contact
