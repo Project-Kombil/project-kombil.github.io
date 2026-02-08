@@ -23,6 +23,8 @@ const TechnicalSkill = ({ data }) => {
                   <img
                     src={element.imgLink}
                     alt="Icon"
+                    width="52"
+                    height="52"
                     loading="lazy"
                     decoding="async"
                   />

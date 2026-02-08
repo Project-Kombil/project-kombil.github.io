@@ -15,6 +15,8 @@ const SingleReview = ({ element }) => {
           <img
             src="images/icon/quote.png"
             alt="quote"
+            width="59"
+            height="43"
             loading="lazy"
             decoding="async"
           />
@@ -22,7 +24,14 @@ const SingleReview = ({ element }) => {
       </div>
       <div className="st-testimonial-info">
         <div className="st-testimonial-img">
-          <img src={imgLink} alt="client1" loading="lazy" decoding="async" />
+          <img
+            src={imgLink}
+            alt="client1"
+            width="75"
+            height="75"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="st-testimonial-meta">
           <h4 className="st-testimonial-name">{title}</h4>

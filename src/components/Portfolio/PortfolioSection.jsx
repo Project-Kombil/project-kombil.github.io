@@ -40,6 +40,8 @@ const PortfolioSection = ({ data }) => {
 								<img
 									src="./images/icon/resume-icon1.png"
 									alt="resume-icon"
+									width="39"
+									height="33"
 									loading="lazy"
 									decoding="async"
 								/>

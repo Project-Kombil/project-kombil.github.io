@@ -23,6 +23,8 @@ const Header = () => {
                 <img
                   src="images/section/hero-img.jpg"
                   alt="author image"
+                  width="800"
+                  height="800"
                   loading="eager"
                   decoding="async"
                 />

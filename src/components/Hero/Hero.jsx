@@ -77,9 +77,11 @@ const Hero = ({ data, socialData }) => {
             <img
               src={imgAuthor}
               alt="Author Image"
+              width="800"
+              height="800"
               loading="eager"
               decoding="async"
-              fetchpriority="high"
+              fetchPriority="high"
             />
           </div>
           <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
