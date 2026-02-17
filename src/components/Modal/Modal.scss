@@ -87,4 +87,14 @@
   .st-modal.st-modal-closing .modal-dialog {
     animation: none;
   }
+
+  .st-modal,
+  .st-modal.st-modal-closing {
+    opacity: 1;
+  }
+
+  .st-modal .modal-dialog,
+  .st-modal.st-modal-closing .modal-dialog {
+    transform: none;
+  }
 }
