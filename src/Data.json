@@ -194,7 +194,7 @@
       },
       {
         "imgLink": "/images/portfolio/display_cards/crypto_webp.webp",
-        "imgLinkLg": "/images/portfolio/crypto-home.png",
+        "imgLinkLg": "/images/portfolio/crypto-home_webp.webp",
         "title": "Crypto Currency Trading Platform",
         "subTitle": "Front-end Development",
         "technology": ["React", "Grommet UI", "Vanilla Javascript", "CSS"],
@@ -348,4 +348,3 @@
     }
   ]
 }
-
