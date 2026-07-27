@@ -1,65 +1,14 @@
 import PropTypes from "prop-types";
-import { useEffect, useRef } from "react";
 import "./Hero.scss";
 import perser from "html-react-parser";
 import SocialLinks2 from "../SocialLinks/SocialLinks2";
 
 const Hero = ({ data, socialData }) => {
   const { title, text, imgAuthor, bgImgLink } = data;
-  const vantaRef = useRef(null);
-  const vantaEffectRef = useRef(null);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    const initVanta = async () => {
-      if (import.meta.env.MODE === "test" || import.meta.env.VITEST) return;
-      const prefersReducedMotion =
-        window.matchMedia &&
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReducedMotion) return;
-
-      const isSmallScreen =
-        window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
-      if (!vantaRef.current || vantaEffectRef.current) return;
-      const THREE = await import("three");
-      window.THREE = THREE;
-      const vantaModule = await import("vanta/dist/vanta.dots.min.js");
-      const DOTS = vantaModule.default?.default || vantaModule.default;
-      if (!isMounted || !vantaRef.current) return;
-      vantaEffectRef.current = DOTS({
-        el: vantaRef.current,
-        mouseControls: !isSmallScreen,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        color: 0x44f8fe,
-        color2: 0x0a101e,
-        backgroundColor: 0x070d1b,
-        size: isSmallScreen ? 2.4 : 3.0,
-        spacing: isSmallScreen ? 48.0 : 34.0,
-        showLines: false,
-      });
-    };
-
-    initVanta();
-
-    return () => {
-      isMounted = false;
-      if (vantaEffectRef.current) {
-        vantaEffectRef.current.destroy();
-        vantaEffectRef.current = null;
-      }
-    };
-  }, []);
 
   return (
     <section
       id="home"
-      ref={vantaRef}
       className="st-hero st-style2 st-bg st-dynamic-bg st-ripple-version"
       style={{
         backgroundImage: `url(${bgImgLink})`,
@@ -67,6 +16,7 @@ const Hero = ({ data, socialData }) => {
         backgroundPosition: "center",
       }}
     >
+      <div className="st-hero-dot-field" aria-hidden="true"></div>
       <div className="container">
         <div className="st-hero-text">
           <div

@@ -8,6 +8,10 @@ exports[`Hero > renders title text and author image 1`] = `
     style="background-image: url("/images/hero-bg.jpg"); background-size: cover; background-position: center center;"
   >
     <div
+      aria-hidden="true"
+      class="st-hero-dot-field"
+    />
+    <div
       class="container"
     >
       <div

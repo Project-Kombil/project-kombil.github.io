@@ -23,9 +23,7 @@
     "react-slick": "^0.31.0",
     "sass": "^1.102.0",
     "slick-carousel": "^1.8.1",
-    "sweetalert2": "^11.26.25",
-    "three": "^0.185.1",
-    "vanta": "^0.5.24"
+    "sweetalert2": "^11.26.25"
   },
   "devDependencies": {
     "@iconify/react": "^6.0.2",
