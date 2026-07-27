@@ -20,15 +20,17 @@ export const ContactForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    if (form.current.company && form.current.company.value) {
+    const formElements = form.current.elements;
+
+    if (formElements.namedItem("company")?.value) {
       return;
     }
 
     const sanitizedData = {
-      name: sanitizeInput(form.current.user_name.value),
-      email: sanitizeInput(form.current.user_email.value),
-      subject: sanitizeInput(form.current.user_subject.value),
-      message: sanitizeInput(form.current.message.value),
+      name: sanitizeInput(formElements.namedItem("user_name").value),
+      email: sanitizeInput(formElements.namedItem("user_email").value),
+      subject: sanitizeInput(formElements.namedItem("user_subject").value),
+      message: sanitizeInput(formElements.namedItem("message").value),
     };
 
     if (!isValidEmail(sanitizedData.email)) {
@@ -105,6 +107,7 @@ export const ContactForm = () => {
         className="st-contact-form"
         id="contact-form"
         onSubmit={sendEmail}
+        noValidate
       >
         <div className="hp-field" aria-hidden="true">
           <label htmlFor="company">Company</label>
