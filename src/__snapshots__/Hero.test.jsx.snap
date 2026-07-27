@@ -5,7 +5,7 @@ exports[`Hero > renders title text and author image 1`] = `
   <section
     class="st-hero st-style2 st-bg st-dynamic-bg st-ripple-version"
     id="home"
-    style="background-image: url("/images/hero-bg.jpg"); background-size: cover; background-position: center;"
+    style="background-image: url("/images/hero-bg.jpg"); background-size: cover; background-position: center center;"
   >
     <div
       class="container"
@@ -21,7 +21,12 @@ exports[`Hero > renders title text and author image 1`] = `
         >
           <img
             alt="Author Image"
+            decoding="async"
+            fetchpriority="high"
+            height="800"
+            loading="eager"
             src="/images/author.jpg"
+            width="800"
           />
         </div>
         <h1
