@@ -1,14 +1,13 @@
 import { useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const ScrollToTopOnLoad = () => {
-  const history = useHistory();
+  const { pathname, search } = useLocation();
+
   useEffect(() => {
-    const unlisten = history.listen(() => {
-      return () => unlisten();
-    });
     window.scrollTo(0, 0);
-  }, [history]);
+  }, [pathname, search]);
+
   return null;
 };
 

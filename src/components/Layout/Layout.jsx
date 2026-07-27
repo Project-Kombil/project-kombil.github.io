@@ -8,9 +8,11 @@ const Layout = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
+    const loadingTimer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
+
+    return () => clearTimeout(loadingTimer);
   }, []);
 
   return (
