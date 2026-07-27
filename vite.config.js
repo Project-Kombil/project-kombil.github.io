@@ -11,7 +11,7 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: "./src/test/setupTests.js",
   },
-  base: "/projekt-kombil/",
+  base: "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),

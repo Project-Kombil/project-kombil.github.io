@@ -38,7 +38,7 @@ const PortfolioSection = ({ data }) => {
             {/* <div className="st-resume-wrap">
 							<div className="st-resume-heading">
 								<img
-									src="images/icon/resume-icon1.png"
+									src="/images/icon/resume-icon1.png"
 									alt="resume-icon"
 									width="39"
 									height="33"

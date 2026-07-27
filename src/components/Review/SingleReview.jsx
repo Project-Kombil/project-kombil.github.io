@@ -13,7 +13,7 @@ const SingleReview = ({ element }) => {
         <p>{text}</p>
         <div className="st-quote">
           <img
-            src="images/icon/quote.png"
+            src="/images/icon/quote.png"
             alt="quote"
             width="59"
             height="43"
