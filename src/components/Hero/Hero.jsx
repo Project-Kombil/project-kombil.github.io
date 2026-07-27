@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react";
 import "./Hero.scss";
 import perser from "html-react-parser";
 import SocialLinks2 from "../SocialLinks/SocialLinks2";
-import * as THREE from "three";
 
 const Hero = ({ data, socialData }) => {
   const { title, text, imgAuthor, bgImgLink } = data;
@@ -23,6 +22,7 @@ const Hero = ({ data, socialData }) => {
       const isSmallScreen =
         window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
       if (!vantaRef.current || vantaEffectRef.current) return;
+      const THREE = await import("three");
       window.THREE = THREE;
       const { default: DOTS } = await import("vanta/dist/vanta.dots.min");
       if (!isMounted || !vantaRef.current) return;
