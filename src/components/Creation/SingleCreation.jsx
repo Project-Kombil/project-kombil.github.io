@@ -14,6 +14,17 @@ const SingleCreation = ({ data, getData }) => {
     delay,
   } = data;
 
+  const openCreation = () => {
+    getData(imgLinkLg, title, subTitle, link, technology);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openCreation();
+    }
+  };
+
   return (
     <div
       className="col-lg-4 col-md-6"
@@ -23,7 +34,10 @@ const SingleCreation = ({ data, getData }) => {
     >
       <div
         className="st-portfolio-single st-style1"
-        onClick={() => getData(imgLinkLg, title, subTitle, link, technology)}
+        role="button"
+        tabIndex="0"
+        onClick={openCreation}
+        onKeyDown={handleKeyDown}
       >
         <div className="st-portfolio-item">
           <div className="st-portfolio st-zoom">
@@ -51,6 +65,7 @@ const SingleCreation = ({ data, getData }) => {
 
 SingleCreation.propTypes = {
   data: PropTypes.object,
+  getData: PropTypes.func,
 };
 
 export default SingleCreation;
