@@ -1,10 +1,9 @@
 import Header from "../Header/Header";
 import { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Preloader from "../Preloader/Preloader";
 
-const Layout = () => {
+const Layout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -23,7 +22,7 @@ const Layout = () => {
         <div className="st-get-sidebar">
           <Header />
           <main id="main-content">
-            <Outlet />
+            {children}
           </main>
           <Footer />
         </div>

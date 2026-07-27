@@ -1,4 +1,3 @@
-import { HashRouter, Route, Routes, useLocation } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import Home from "./pages/Home";
 import Aos from "aos";
@@ -8,7 +7,6 @@ import ReactGA from "react-ga4";
 
 // Tracks page views on route change
 function GAListener({ children }) {
-  const location = useLocation();
   const initializedRef = useRef(false);
   const gaId = import.meta.env.VITE_GA_ID;
 
@@ -37,9 +35,9 @@ function GAListener({ children }) {
     if (!gaId) return;
     ReactGA.send({
       hitType: "pageview",
-      page: location.pathname + location.search,
+      page: window.location.pathname + window.location.search,
     });
-  }, [location, gaId]);
+  }, [gaId]);
 
   return children;
 }
@@ -69,17 +67,11 @@ function App() {
   }, []);
 
   return (
-    <HashRouter>
-      <GAListener>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            {/* optional catch-all route if you ever add more pages */}
-            {/* <Route path="*" element={<Home />} /> */}
-          </Route>
-        </Routes>
-      </GAListener>
-    </HashRouter>
+    <GAListener>
+      <Layout>
+        <Home />
+      </Layout>
+    </GAListener>
   );
 }
 
