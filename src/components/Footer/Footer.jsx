@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="st-copyright-wrap text-center">
           <div className="st-copyright-text">
-            © {currentYear}. Projected by Project Kombil. All right reserved.
+            © {currentYear}. Projekted by Project Kombil. All right reserved.
           </div>
         </div>
       </div>
