@@ -12,6 +12,6 @@ In this portfolio, you will find examples of my work in UI/UX design and front-e
 
 ## Contact Me
 
-You can reach me at alefay.bunes@gmail.com.
+You can reach me at info@x07s.com.
 
 Thank you for visiting my portfolio!

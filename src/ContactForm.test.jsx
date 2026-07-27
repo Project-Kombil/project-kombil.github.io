@@ -3,10 +3,6 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { ContactForm } from "./components/Contact/ContactForm";
 import Swal from "sweetalert2";
 
-vi.mock("@emailjs/browser", () => ({
-  default: { send: vi.fn(() => Promise.resolve()) },
-}));
-
 vi.mock("sweetalert2", () => ({
   default: { fire: vi.fn(), showLoading: vi.fn() },
 }));
