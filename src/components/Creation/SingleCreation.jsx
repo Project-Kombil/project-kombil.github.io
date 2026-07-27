@@ -17,6 +17,7 @@ const SingleCreation = ({ data, getData }) => {
   const openCreation = () => {
     getData(imgLinkLg, title, subTitle, link, technology);
   };
+  const visibleTechnology = technology?.slice(0, 3) || [];
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter" || event.key === " ") {
@@ -52,9 +53,18 @@ const SingleCreation = ({ data, getData }) => {
               />
             </div>
             <div className="st-portfolio-item-hover">
-              {/* <Icon icon="mdi:eye" /> */}
+              <span>View project</span>
+            </div>
+            <div className="st-portfolio-content">
+              <p>{subTitle}</p>
               <h5>{title}</h5>
-              {/* <p>{subTitle}</p> */}
+              {visibleTechnology.length > 0 && (
+                <div className="st-portfolio-tags">
+                  {visibleTechnology.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>

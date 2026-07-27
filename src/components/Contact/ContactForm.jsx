@@ -45,6 +45,32 @@ const loadTurnstile = () => {
   return turnstileScriptPromise;
 };
 
+const alertTheme = {
+  background: "#0a101e",
+  color: "#fdfeff",
+  buttonsStyling: false,
+  showConfirmButton: false,
+  showCloseButton: true,
+  customClass: {
+    popup: "st-alert-popup",
+    htmlContainer: "st-alert-text",
+    closeButton: "st-alert-close",
+    confirmButton: "st-alert-button",
+    loader: "st-alert-loader",
+  },
+};
+
+const showContactAlert = (options) => {
+  Swal.fire({
+    ...alertTheme,
+    ...options,
+    customClass: {
+      ...alertTheme.customClass,
+      ...options.customClass,
+    },
+  });
+};
+
 export const ContactForm = () => {
   const form = useRef();
   const turnstileContainer = useRef(null);
@@ -117,27 +143,23 @@ export const ContactForm = () => {
     };
 
     if (!isValidEmail(sanitizedData.email)) {
-      Swal.fire({
+      showContactAlert({
         icon: "error",
         text: "Please enter a valid email address",
-        showConfirmButton: false,
-        showCloseButton: true,
       });
       return;
     }
 
     if (!turnstileToken) {
-      Swal.fire({
+      showContactAlert({
         icon: "error",
         text: "Please complete the security check",
-        showConfirmButton: false,
-        showCloseButton: true,
       });
       return;
     }
 
     setIsSubmitting(true);
-    Swal.fire({
+    showContactAlert({
       text: "Sending message...",
       allowOutsideClick: false,
       didOpen: () => {
@@ -161,23 +183,17 @@ export const ContactForm = () => {
         throw new Error("Contact worker rejected the message");
       }
 
-      Swal.fire({
+      showContactAlert({
         icon: "success",
         text: "Message sent",
-        showCloseButton: true,
-        showConfirmButton: false,
-        background: "#fdfeff",
         timer: 2000,
       });
       form.current.reset();
       resetTurnstile();
     } catch (error) {
-      Swal.fire({
+      showContactAlert({
         icon: "error",
         text: "Your message could not be sent at this time. Please try again later",
-        showCloseButton: true,
-        showConfirmButton: false,
-        background: "#fdfeff",
         timer: 3000,
       });
       resetTurnstile();

@@ -2,7 +2,7 @@
 
 .modal-title,
 .modal-subtitle {
-  color: theme.$base-color4;
+  color: theme.$base-color3;
 }
 
 .st-modal {
@@ -24,24 +24,36 @@
 }
 
 .modal-content {
-  background-color: theme.$base-color3;
-  border: 1px solid theme.$base-color4;
+  background-color: theme.$dark-color3;
+  border: 1px solid rgba(68, 248, 254, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 26px 90px rgba(0, 0, 0, 0.42);
   font-family: "Inter", sans-serif;
 }
 
 .modal-header {
-  border-bottom: 1px solid theme.$base-color4;
+  border-bottom: 1px solid rgba(68, 248, 254, 0.14);
+}
+
+.modal-header .btn-close {
+  filter: invert(1) grayscale(1);
+  opacity: 0.72;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .modal-body img {
   width: 100%;
   margin-bottom: 20px;
-  border: 2px solid grey;
-  border-radius: 10px;
+  border: 1px solid rgba(68, 248, 254, 0.16);
+  border-radius: 8px;
 }
 
 .modal-link {
-  color: darkblue;
+  color: theme.$base-color1;
+  font-weight: 600;
 }
 
 @keyframes st-modal-fade-in {
