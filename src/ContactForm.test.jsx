@@ -13,6 +13,10 @@ vi.mock("sweetalert2", () => ({
   default: { fire: vi.fn(), showLoading: vi.fn() },
 }));
 
+vi.mock("./utils/analytics", () => ({
+  trackEvent: vi.fn(),
+}));
+
 const turnstileToken = "test-turnstile-token";
 
 const fillContactForm = (container, { email = "test@example.com" } = {}) => {

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Swal from "sweetalert2";
 import "sweetalert2/src/sweetalert2.scss";
+import { trackEvent } from "../../utils/analytics";
 
 const CONTACT_WORKER_URL =
   import.meta.env.VITE_CONTACT_WORKER_URL ||
@@ -188,6 +189,9 @@ export const ContactForm = () => {
         text: "Message sent",
         timer: 2000,
       });
+      trackEvent("contact_form_success", {
+        form_name: "contact",
+      });
       form.current.reset();
       resetTurnstile();
     } catch (error) {
@@ -195,6 +199,9 @@ export const ContactForm = () => {
         icon: "error",
         text: "Your message could not be sent at this time. Please try again later",
         timer: 3000,
+      });
+      trackEvent("contact_form_error", {
+        form_name: "contact",
       });
       resetTurnstile();
     } finally {

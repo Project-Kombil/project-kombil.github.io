@@ -4,6 +4,7 @@ import SectionHeading from "../SectionHeading/SectionHeading";
 import { useState } from "react";
 import SingleCreation from "./SingleCreation";
 import Modal from "../Modal/Modal";
+import { trackEvent } from "../../utils/analytics";
 
 const CreationSection = ({ data }) => {
   // Modal
@@ -13,6 +14,10 @@ const CreationSection = ({ data }) => {
   const getData = (imgLink, title, subTitle, link, technology) => {
     let tempData = [imgLink, title, subTitle, link, technology];
     setTempData((item) => [1, ...tempData]);
+    trackEvent("project_modal_open", {
+      project_title: title,
+      project_url: link || "none",
+    });
     setModal(true);
   };
 
@@ -35,9 +40,13 @@ const CreationSection = ({ data }) => {
       currentLength,
       currentLength + itemsPerPage
     );
+    const nextVisibleCount = currentLength + nextChunk.length;
     setVisibleItems((prevItems) => [...prevItems, ...nextChunk]);
+    trackEvent("creations_load_more", {
+      visible_count: nextVisibleCount,
+    });
 
-    if (currentLength + itemsPerPage >= creationItems.length) {
+    if (nextVisibleCount >= creationItems.length) {
       setShowLoadMore(false);
     }
   };

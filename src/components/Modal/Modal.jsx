@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Modal.scss";
+import { trackEvent } from "../../utils/analytics";
 
 const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
   const [isClosing, setIsClosing] = useState(false);
@@ -13,6 +14,14 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
       modalClose();
     }, 220);
   };
+
+  const handleProjectClick = () => {
+    trackEvent("project_outbound_click", {
+      project_title: title,
+      project_url: link,
+    });
+  };
+
   return (
     <div
       className={`modal show fade bd-example-modal-lg modal st-modal ${
@@ -65,6 +74,7 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
                 className="modal-link"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleProjectClick}
               >
                 Visit project
               </a>

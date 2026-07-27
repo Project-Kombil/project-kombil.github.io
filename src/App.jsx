@@ -3,41 +3,25 @@ import Home from "./pages/Home";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Layout from "./components/Layout/Layout";
-import ReactGA from "react-ga4";
+import {
+  initializeAnalytics,
+  trackEvent,
+  trackPageView,
+} from "./utils/analytics";
 
-// Tracks page views on route change
 function GAListener({ children }) {
   const initializedRef = useRef(false);
-  const gaId = import.meta.env.VITE_GA_ID;
 
   useEffect(() => {
-    if (!gaId) return;
     if (!initializedRef.current) {
-      if (!window.gtag) {
-        const script = document.createElement("script");
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
-        document.head.appendChild(script);
-
-        window.dataLayer = window.dataLayer || [];
-        window.gtag = function gtag() {
-          window.dataLayer.push(arguments);
-        };
-        window.gtag("js", new Date());
-        window.gtag("config", gaId, { send_page_view: false });
-      }
-      ReactGA.initialize(gaId);
+      initializeAnalytics();
       initializedRef.current = true;
     }
-  }, [gaId]);
+  }, []);
 
   useEffect(() => {
-    if (!gaId) return;
-    ReactGA.send({
-      hitType: "pageview",
-      page: window.location.pathname + window.location.search,
-    });
-  }, [gaId]);
+    trackPageView();
+  }, []);
 
   return children;
 }
@@ -52,12 +36,10 @@ function App() {
 
     let sentFirstScroll = false;
     const handleScroll = () => {
-      if (!import.meta.env.VITE_GA_ID) return;
       if (sentFirstScroll) return;
       sentFirstScroll = true;
-      ReactGA.event({
-        category: "Engagement",
-        action: "First Scroll",
+      trackEvent("first_scroll", {
+        event_category: "engagement",
       });
       window.removeEventListener("scroll", handleScroll);
     };
