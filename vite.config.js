@@ -4,6 +4,9 @@ import path from "node:path";
 
 export default defineConfig({
   plugins: [react()],
+  build: {
+    chunkSizeWarningLimit: 750,
+  },
   test: {
     environment: "jsdom",
     setupFiles: "./src/test/setupTests.js",
