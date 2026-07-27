@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://project-kombil.github.io/sitemap.xml
+Sitemap: https://projekt-kombil.github.io/projekt-kombil/sitemap.xml
