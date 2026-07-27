@@ -66,12 +66,12 @@
 
         > a {
           padding: 15px 0;
-          font-size: 15px;
+          font-size: 14px;
           display: inline-block;
           color: theme.$base-color3;
-          text-transform: uppercase;
-          font-family: "Roboto", sans-serif;
-          font-weight: 500;
+          font-family: "Inter", sans-serif;
+          font-weight: 600;
+          line-height: 1.4em;
           cursor: pointer;
 
           &.active {

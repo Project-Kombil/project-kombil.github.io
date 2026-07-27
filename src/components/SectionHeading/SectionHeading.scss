@@ -8,12 +8,11 @@
 
   .st-section-heading-title {
     font-size: 24px;
-    font-weight: 500;
-    text-transform: uppercase;
+    font-weight: 600;
     color: theme.$base-color1;
     position: relative;
     z-index: 10;
-    letter-spacing: 1px;
+    letter-spacing: 0;
 
     &::before {
       content: "";
@@ -39,13 +38,12 @@
   }
 
   .st-section-heading-subtitle {
-    text-transform: uppercase;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     font-size: 90px;
-    font-weight: 700;
+    font-weight: 600;
     color: rgba(theme.$dark-color1, 0.5);
     margin: 0;
     margin-top: -17px;
