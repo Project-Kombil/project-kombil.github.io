@@ -24,7 +24,8 @@ const Hero = ({ data, socialData }) => {
       if (!vantaRef.current || vantaEffectRef.current) return;
       const THREE = await import("three");
       window.THREE = THREE;
-      const { default: DOTS } = await import("vanta/dist/vanta.dots.min");
+      const vantaModule = await import("vanta/dist/vanta.dots.min.js");
+      const DOTS = vantaModule.default?.default || vantaModule.default;
       if (!isMounted || !vantaRef.current) return;
       vantaEffectRef.current = DOTS({
         el: vantaRef.current,
