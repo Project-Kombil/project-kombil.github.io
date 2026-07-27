@@ -86,7 +86,7 @@
         "imgLinkLg": "/images/portfolio/attendo.webp",
         "title": "Attendo",
         "subTitle": "Design and Development",
-        "link": "http://attendo.services",
+        "link": "https://attendo.services",
         "technology": ["Adobe XD", "React", "NextJS", "NodeJS", "AWS"],
         "effect": "fade-up",
         "duration": "500",
