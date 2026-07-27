@@ -110,7 +110,7 @@ export const ContactForm = () => {
 
   const sanitizeInput = (input) => {
     const tempDiv = document.createElement("div");
-    tempDiv.innerText = input;
+    tempDiv.textContent = input;
     return tempDiv.innerHTML;
   };
 
