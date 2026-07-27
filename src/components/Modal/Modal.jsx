@@ -4,7 +4,6 @@ import "./Modal.scss";
 const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
   const [isClosing, setIsClosing] = useState(false);
   const modalStyle = {
-    backgroundColor: "rgba(0,0,0,0.8)",
     display: "block",
   };
 
@@ -19,20 +18,29 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
       className={`modal show fade bd-example-modal-lg modal st-modal ${
         isClosing ? "st-modal-closing" : "st-modal-open"
       }`}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="creation-modal-title"
       style={modalStyle}
     >
       <div className="modal-dialog modal-lg modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-header">
-            <h4 className="modal-title">{title}</h4>
+            <div>
+              <p className="modal-eyebrow">{subTitle}</p>
+              <h4 className="modal-title" id="creation-modal-title">
+                {title}
+              </h4>
+            </div>
             <button
               type="button"
               className="btn-close"
+              aria-label="Close project details"
               onClick={handleClose}
             ></button>
           </div>
           <div className="modal-body">
-            <div className="st-flex-center">
+            <div className="modal-media">
               <img
                 src={img}
                 alt={title}
@@ -42,17 +50,14 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
                 decoding="async"
               />
             </div>
-            <p className="modal-subtitle">{subTitle}</p>
-            <br />
-            <p className="modal-subtitle">Technologies Utilized:</p>
             {technology && technology.length > 0 && (
-              <ul>
+              <div className="modal-tech-list" aria-label="Technologies used">
                 {technology.map((item, index) => (
-                  <li className="modal-subtitle" key={index}>
+                  <span key={index}>
                     {item}
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
             )}
             {link && link.trim() !== "" && (
               <a
@@ -61,7 +66,7 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                LINK to Website
+                Visit project
               </a>
             )}
           </div>

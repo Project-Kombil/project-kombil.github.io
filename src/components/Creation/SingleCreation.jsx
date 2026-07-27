@@ -9,9 +9,6 @@ const SingleCreation = ({ data, getData }) => {
     subTitle,
     link,
     technology,
-    effect,
-    duration,
-    delay,
   } = data;
 
   const openCreation = () => {
@@ -27,12 +24,7 @@ const SingleCreation = ({ data, getData }) => {
   };
 
   return (
-    <div
-      className="col-lg-4 col-md-6"
-      data-aos={effect}
-      data-aos-duration={duration}
-      data-aos-delay={delay}
-    >
+    <div className="col-lg-4 col-md-6">
       <div
         className="st-portfolio-single st-style1"
         role="button"
