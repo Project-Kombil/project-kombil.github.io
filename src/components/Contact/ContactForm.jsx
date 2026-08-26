@@ -228,80 +228,83 @@ export const ContactForm = () => {
         id="contact-form"
         onSubmit={sendEmail}
         noValidate
+        aria-busy={isSubmitting}
       >
-        <div className="hp-field" aria-hidden="true">
-          <label htmlFor="company">Company</label>
-          <input
-            type="text"
-            id="company"
-            name="company"
-            tabIndex="-1"
-            autoComplete="off"
-          />
-        </div>
-        <div className="st-form-field">
-          <input
-            type="text"
-            id="name"
-            name="user_name"
-            placeholder="Your Name"
-            required
-            minLength="2"
-            maxLength="100"
-          />
-        </div>
-        <div className="st-form-field">
-          <input
-            type="email"
-            id="email"
-            name="user_email"
-            placeholder="Your Email"
-            required
-            maxLength="254"
-          />
-        </div>
-        <div className="st-form-field">
-          <input
-            type="text"
-            id="subject"
-            name="user_subject"
-            placeholder="Your Subject"
-            required
-            minLength="2"
-            maxLength="200"
-          />
-        </div>
-        <div className="st-form-field">
-          <textarea
-            cols="30"
-            rows="10"
-            id="msg"
-            name="message"
-            placeholder="Your Message"
-            required
-            minLength="2"
-            maxLength="5000"
-          ></textarea>
-        </div>
-        <div
-          className="st-form-field"
-          ref={turnstileContainer}
-          aria-label="Security check"
-        ></div>
-        {turnstileError && (
-          <p className="st-form-error" role="alert">
-            {turnstileError}
-          </p>
-        )}
-        <button
-          className="st-btn st-style1 st-color1"
-          type="submit"
-          id="submit"
-          name="submit"
-          disabled={isSubmitting}
-        >
-          {isSubmitting ? "Sending..." : "Send Message"}
-        </button>
+        <fieldset className="st-contact-fields" disabled={isSubmitting}>
+          <div className="hp-field" aria-hidden="true">
+            <label htmlFor="company">Company</label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              tabIndex="-1"
+              autoComplete="off"
+            />
+          </div>
+          <div className="st-form-field">
+            <input
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Your Name"
+              required
+              minLength="2"
+              maxLength="100"
+            />
+          </div>
+          <div className="st-form-field">
+            <input
+              type="email"
+              id="email"
+              name="user_email"
+              placeholder="Your Email"
+              required
+              maxLength="254"
+            />
+          </div>
+          <div className="st-form-field">
+            <input
+              type="text"
+              id="subject"
+              name="user_subject"
+              placeholder="Your Subject"
+              required
+              minLength="2"
+              maxLength="200"
+            />
+          </div>
+          <div className="st-form-field">
+            <textarea
+              cols="30"
+              rows="10"
+              id="msg"
+              name="message"
+              placeholder="Your Message"
+              required
+              minLength="2"
+              maxLength="5000"
+            ></textarea>
+          </div>
+          <div
+            className="st-form-field"
+            ref={turnstileContainer}
+            aria-label="Security check"
+          ></div>
+          {turnstileError && (
+            <p className="st-form-error" role="alert">
+              {turnstileError}
+            </p>
+          )}
+          <button
+            className="st-btn st-style1 st-color1"
+            type="submit"
+            id="submit"
+            name="submit"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Sending..." : "Send Message"}
+          </button>
+        </fieldset>
       </form>
     </>
   );

@@ -128,6 +128,38 @@ describe("ContactForm", () => {
     );
   });
 
+  it("disables all form controls while sending", async () => {
+    let resolveRequest;
+    fetch.mockReturnValue(
+      new Promise((resolve) => {
+        resolveRequest = resolve;
+      })
+    );
+    const { container } = render(<ContactForm />);
+
+    await waitFor(() => {
+      expect(window.turnstile.render).toHaveBeenCalled();
+    });
+
+    fillContactForm(container);
+    fireEvent.click(screen.getByRole("button", { name: /send message/i }));
+
+    await waitFor(() => {
+      expect(container.querySelector("fieldset")).toBeDisabled();
+      expect(screen.getByRole("button", { name: /sending/i })).toBeDisabled();
+      expect(container.querySelector('[name="user_name"]')).toBeDisabled();
+      expect(container.querySelector('[name="user_email"]')).toBeDisabled();
+      expect(container.querySelector('[name="user_subject"]')).toBeDisabled();
+      expect(container.querySelector('[name="message"]')).toBeDisabled();
+    });
+
+    resolveRequest({ ok: true });
+
+    await waitFor(() => {
+      expect(container.querySelector("fieldset")).not.toBeDisabled();
+    });
+  });
+
   it("shows an error and resets Turnstile when the Worker rejects a message", async () => {
     fetch.mockResolvedValue({ ok: false });
     const { container } = render(<ContactForm />);

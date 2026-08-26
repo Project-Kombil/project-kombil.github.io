@@ -12,6 +12,21 @@
   margin-bottom: 22px;
 }
 
+.st-contact-fields {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  &:disabled {
+    cursor: wait;
+
+    .st-form-field {
+      pointer-events: none;
+    }
+  }
+}
+
 .st-form-field {
   width: 100%;
   margin-bottom: 30px;
