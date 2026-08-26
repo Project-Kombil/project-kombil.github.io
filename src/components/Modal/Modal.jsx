@@ -1,19 +1,44 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Modal.scss";
 import { trackEvent } from "../../utils/analytics";
 
 const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
   const [isClosing, setIsClosing] = useState(false);
+  const isClosingRef = useRef(false);
+  const closeButtonRef = useRef(null);
+  const closeTimerRef = useRef(null);
   const modalStyle = {
     display: "block",
   };
 
   const handleClose = () => {
+    if (isClosingRef.current) return;
+
+    isClosingRef.current = true;
     setIsClosing(true);
-    setTimeout(() => {
+    closeTimerRef.current = window.setTimeout(() => {
       modalClose();
     }, 220);
   };
+
+  useEffect(() => {
+    const previouslyFocused = document.activeElement;
+    const previousOverflow = document.body.style.overflow;
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") handleClose();
+    };
+
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+      window.clearTimeout(closeTimerRef.current);
+      previouslyFocused?.focus?.();
+    };
+  }, []);
 
   const handleProjectClick = () => {
     trackEvent("project_outbound_click", {
@@ -31,6 +56,9 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
       aria-modal="true"
       aria-labelledby="creation-modal-title"
       style={modalStyle}
+      onMouseDown={(event) => {
+        if (event.target === event.currentTarget) handleClose();
+      }}
     >
       <div className="modal-dialog modal-lg modal-dialog-centered">
         <div className="modal-content">
@@ -46,6 +74,7 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
               className="btn-close"
               aria-label="Close project details"
               onClick={handleClose}
+              ref={closeButtonRef}
             ></button>
           </div>
           <div className="modal-body">
