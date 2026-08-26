@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import { projectsData, socialData } from "./data";
+import { projectsData, socialData } from "./index";
 
 const projectItems = projectsData.creationItems;
 const socials = socialData;

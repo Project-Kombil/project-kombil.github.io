@@ -6,13 +6,13 @@ const SingleCreation = ({ data, getData }) => {
     imgLink,
     imgLinkLg,
     title,
-    subTitle,
+    subtitle,
     link,
     technology,
   } = data;
 
   const openCreation = () => {
-    getData(imgLinkLg, title, subTitle, link, technology);
+    getData(imgLinkLg, title, subtitle, link, technology);
   };
   const visibleTechnology = technology?.slice(0, 3) || [];
 
@@ -48,7 +48,7 @@ const SingleCreation = ({ data, getData }) => {
               <span>View project</span>
             </div>
             <div className="st-portfolio-content">
-              <p>{subTitle}</p>
+              <p>{subtitle}</p>
               <h5>{title}</h5>
               {visibleTechnology.length > 0 && (
                 <div className="st-portfolio-tags">

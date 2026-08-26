@@ -7,7 +7,7 @@ import "./Contact.scss";
 
 
 const Contact = ({ data, socialData }) => {
-  const { title, text, subTitle } = data;
+  const { title, text, subtitle } = data;
 
   return (
     <section id="contact">
@@ -59,7 +59,7 @@ const Contact = ({ data, socialData }) => {
                 </div>
               </div>
               <div className="st-social-info">
-                <div className="st-social-text">{subTitle}</div>
+                <div className="st-social-text">{subtitle}</div>
                 <SocialLinks data={socialData} />
               </div>
             </div>

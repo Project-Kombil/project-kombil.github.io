@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./Modal.scss";
 import { trackEvent } from "../../utils/analytics";
 
-const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
+const Modal = ({ img, title, subtitle, link, technology, modalClose }) => {
   const [isClosing, setIsClosing] = useState(false);
   const isClosingRef = useRef(false);
   const closeButtonRef = useRef(null);
@@ -64,7 +64,7 @@ const Modal = ({ img, title, subTitle, link, technology, modalClose }) => {
         <div className="modal-content">
           <div className="modal-header">
             <div>
-              <p className="modal-eyebrow">{subTitle}</p>
+              <p className="modal-eyebrow">{subtitle}</p>
               <h4 className="modal-title" id="creation-modal-title">
                 {title}
               </h4>

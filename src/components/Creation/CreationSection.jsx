@@ -11,8 +11,8 @@ const CreationSection = ({ data }) => {
   const [modal, setModal] = useState(false);
   const [tempData, setTempData] = useState([]);
 
-  const getData = (imgLink, title, subTitle, link, technology) => {
-    let tempData = [imgLink, title, subTitle, link, technology];
+  const getData = (imgLink, title, subtitle, link, technology) => {
+    const tempData = [imgLink, title, subtitle, link, technology];
     setTempData((item) => [1, ...tempData]);
     trackEvent("project_modal_open", {
       project_title: title,
@@ -81,7 +81,7 @@ const CreationSection = ({ data }) => {
         <Modal
           img={tempData[1]}
           title={tempData[2]}
-          subTitle={tempData[3]}
+          subtitle={tempData[3]}
           link={tempData[4]}
           technology={tempData[5]}
           modalClose={modalClose}
