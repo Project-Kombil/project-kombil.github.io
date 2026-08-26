@@ -1,34 +1,8 @@
 @use "../../sass/default" as theme;
 
-.st-site-header.st-style1 {
-  transition: all 0.4s ease;
-
-  .st-main-header-in {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: 80px;
-  }
-
-  &.st-transparent-header {
-    background-color: transparent;
-    box-shadow: none;
-  }
-
-  &.st-sticky-active {
-    background-color: rgba(theme.$dark-color2, 0.9);
-    box-shadow: 0 10px 10px -10px rgba(theme.$dark-color2, 0.9);
-  }
-}
-
 @media screen and (max-width: 991px) {
   .st-main-header .container {
     max-width: 100%;
-  }
-
-  .st-site-header.st-style1 {
-    background-color: theme.$dark-color2;
   }
 }
 
@@ -325,36 +299,8 @@
       }
     }
 
-    .st-social-btn.st-style1 {
-      position: fixed;
-      bottom: 40px;
-      left: 40px;
-
-      li {
-        color: theme.$dark-color3;
-        margin-right: 20px;
-        font-size: 18px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        a {
-          &:hover {
-            color: theme.$dark-color2;
-          }
-        }
-      }
-    }
-
     .st-main-header-left {
       margin-bottom: 24px;
-    }
-
-    .st-btn.st-style1 {
-      margin-top: 20px;
-      font-size: 14px;
-      padding: 0.6em 1.3em;
     }
 
     .st-hero-btn {
@@ -381,8 +327,7 @@
 
 @media screen and (max-width: 991px) {
   .st-site-header .st-btn,
-  .st-site-header.st-style2 .st-opening-hr,
-  .st-site-header.st-style2 .st-social-btn.st-style1 {
+  .st-site-header.st-style2 .st-opening-hr {
     display: none !important;
   }
 

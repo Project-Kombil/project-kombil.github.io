@@ -1,7 +1,6 @@
 import { Suspense, lazy } from "react";
 import data from "../Data.json";
 import Hero from "../components/Hero/Hero";
-// import ReviewSection from "../components/Review/ReviewSection";
 
 const About = lazy(() => import("../components/About/About"));
 const TechnicalSkill = lazy(
@@ -22,7 +21,6 @@ const Home = () => {
     serviceData,
     creationData,
     portfolioData,
-    // reviewData,
     contactData,
     socialData,
     socialData2,
@@ -42,7 +40,6 @@ const Home = () => {
       <Suspense fallback={null}>
         <CreationSection data={creationData} data-aos="fade-right" />
       </Suspense>
-      {/* <ReviewSection data={reviewData} data-aos="fade-right" /> */}
       <Suspense fallback={null}>
         <Contact
           data={contactData}

@@ -21,42 +21,6 @@
   }
 }
 
-.st-hero.st-style1 {
-  height: 710px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  overflow: hidden;
-  z-index: 11;
-
-  .st-hero-text {
-    h1 {
-      font-size: 120px;
-      margin-bottom: 24px;
-      font-weight: 900;
-      color: theme.$base-color3;
-      line-height: 1;
-    }
-
-    h2 {
-      font-size: 36px;
-      margin-bottom: 41px;
-      font-weight: 300;
-      color: theme.$base-color2;
-    }
-
-    h3 {
-      font-size: 30px;
-      margin-top: -6px;
-      margin-bottom: 10px;
-      font-weight: 300;
-      color: theme.$base-color1;
-    }
-  }
-}
-
 .st-social-group {
   background-color: theme.$dark-color4;
   border: 1px solid theme.$base-color4;
@@ -484,15 +448,5 @@ canvas {
 
   .st-hero.st-style2 p br {
     display: none;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .st-hero.st-style1 {
-    height: 580px;
-
-    .st-hero-text h1 {
-      font-size: 90px;
-    }
   }
 }
