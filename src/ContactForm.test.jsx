@@ -77,6 +77,21 @@ describe("ContactForm", () => {
     expect(fetch).not.toHaveBeenCalled();
   });
 
+  it("uses native validation for required form fields", () => {
+    const reportValidity = vi
+      .spyOn(HTMLFormElement.prototype, "reportValidity")
+      .mockReturnValue(false);
+    const { container } = render(<ContactForm />);
+
+    fillContactForm(container);
+    container.querySelector('[name="user_subject"]').value = "";
+
+    fireEvent.click(screen.getByRole("button", { name: /send message/i }));
+
+    expect(reportValidity).toHaveBeenCalled();
+    expect(fetch).not.toHaveBeenCalled();
+  });
+
   it("sends contact form data with the Turnstile token", async () => {
     fetch.mockResolvedValue({ ok: true });
     const { container } = render(<ContactForm />);
@@ -111,5 +126,56 @@ describe("ContactForm", () => {
         text: "Message sent",
       })
     );
+  });
+
+  it("shows an error and resets Turnstile when the Worker rejects a message", async () => {
+    fetch.mockResolvedValue({ ok: false });
+    const { container } = render(<ContactForm />);
+
+    await waitFor(() => {
+      expect(window.turnstile.render).toHaveBeenCalled();
+    });
+
+    fillContactForm(container);
+    fireEvent.click(screen.getByRole("button", { name: /send message/i }));
+
+    await waitFor(() => {
+      expect(Swal.fire).toHaveBeenCalledWith(
+        expect.objectContaining({
+          text: "Your message could not be sent at this time. Please try again later",
+        })
+      );
+      expect(window.turnstile.reset).toHaveBeenCalledWith("widget-id");
+    });
+  });
+
+  it("preserves message text while trimming leading and trailing whitespace", async () => {
+    fetch.mockResolvedValue({ ok: true });
+    const { container } = render(<ContactForm />);
+
+    await waitFor(() => {
+      expect(window.turnstile.render).toHaveBeenCalled();
+    });
+
+    fillContactForm(container);
+    container.querySelector('[name="user_name"]').value = "  A & B  ";
+    container.querySelector('[name="message"]').value = "  Hello & welcome  ";
+
+    fireEvent.click(screen.getByRole("button", { name: /send message/i }));
+
+    await waitFor(() => {
+      expect(fetch).toHaveBeenCalledWith(
+        "https://online-portfolio-contact-form.kombil.workers.dev/",
+        expect.objectContaining({
+          body: JSON.stringify({
+            name: "A & B",
+            email: "test@example.com",
+            subject: "Hello",
+            message: "Hello & welcome",
+            turnstileToken,
+          }),
+        })
+      );
+    });
   });
 });

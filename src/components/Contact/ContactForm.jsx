@@ -77,6 +77,7 @@ export const ContactForm = () => {
   const turnstileContainer = useRef(null);
   const turnstileWidgetId = useRef(null);
   const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileError, setTurnstileError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
@@ -98,7 +99,15 @@ export const ContactForm = () => {
       );
     };
 
-    loadTurnstile().then(renderTurnstile).catch(() => {});
+    loadTurnstile()
+      .then(renderTurnstile)
+      .catch(() => {
+        if (isMounted) {
+          setTurnstileError(
+            "The security check could not be loaded. Please refresh the page and try again.",
+          );
+        }
+      });
 
     return () => {
       isMounted = false;
@@ -108,12 +117,6 @@ export const ContactForm = () => {
       }
     };
   }, []);
-
-  const sanitizeInput = (input) => {
-    const tempDiv = document.createElement("div");
-    tempDiv.textContent = input;
-    return tempDiv.innerHTML;
-  };
 
   const isValidEmail = (email) => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -130,20 +133,21 @@ export const ContactForm = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    const formElements = form.current.elements;
+    const currentForm = form.current;
+    const formElements = currentForm.elements;
 
     if (formElements.namedItem("company")?.value) {
       return;
     }
 
-    const sanitizedData = {
-      name: sanitizeInput(formElements.namedItem("user_name").value),
-      email: sanitizeInput(formElements.namedItem("user_email").value),
-      subject: sanitizeInput(formElements.namedItem("user_subject").value),
-      message: sanitizeInput(formElements.namedItem("message").value),
+    const formData = {
+      name: formElements.namedItem("user_name").value.trim(),
+      email: formElements.namedItem("user_email").value.trim(),
+      subject: formElements.namedItem("user_subject").value.trim(),
+      message: formElements.namedItem("message").value.trim(),
     };
 
-    if (!isValidEmail(sanitizedData.email)) {
+    if (!isValidEmail(formData.email)) {
       showContactAlert({
         icon: "error",
         text: "Please enter a valid email address",
@@ -151,7 +155,12 @@ export const ContactForm = () => {
       return;
     }
 
-    if (!turnstileToken) {
+    if (!currentForm.checkValidity()) {
+      currentForm.reportValidity();
+      return;
+    }
+
+    if (!turnstileToken || turnstileError) {
       showContactAlert({
         icon: "error",
         text: "Please complete the security check",
@@ -168,6 +177,9 @@ export const ContactForm = () => {
       },
     });
 
+    const controller = new AbortController();
+    const requestTimeout = window.setTimeout(() => controller.abort(), 15_000);
+
     try {
       const response = await fetch(CONTACT_WORKER_URL, {
         method: "POST",
@@ -175,9 +187,10 @@ export const ContactForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ...sanitizedData,
+          ...formData,
           turnstileToken,
         }),
+        signal: controller.signal,
       });
 
       if (!response.ok) {
@@ -197,7 +210,10 @@ export const ContactForm = () => {
     } catch (error) {
       showContactAlert({
         icon: "error",
-        text: "Your message could not be sent at this time. Please try again later",
+        text:
+          error.name === "AbortError"
+            ? "The request timed out. Please try again later."
+            : "Your message could not be sent at this time. Please try again later",
         timer: 3000,
       });
       trackEvent("contact_form_error", {
@@ -205,6 +221,7 @@ export const ContactForm = () => {
       });
       resetTurnstile();
     } finally {
+      window.clearTimeout(requestTimeout);
       setIsSubmitting(false);
     }
   };
@@ -215,8 +232,6 @@ export const ContactForm = () => {
         ref={form}
         name="contact"
         method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="company"
         className="st-contact-form"
         id="contact-form"
         onSubmit={sendEmail}
@@ -239,6 +254,8 @@ export const ContactForm = () => {
             name="user_name"
             placeholder="Your Name"
             required
+            minLength="2"
+            maxLength="100"
           />
         </div>
         <div className="st-form-field">
@@ -248,6 +265,7 @@ export const ContactForm = () => {
             name="user_email"
             placeholder="Your Email"
             required
+            maxLength="254"
           />
         </div>
         <div className="st-form-field">
@@ -257,6 +275,8 @@ export const ContactForm = () => {
             name="user_subject"
             placeholder="Your Subject"
             required
+            minLength="2"
+            maxLength="200"
           />
         </div>
         <div className="st-form-field">
@@ -267,6 +287,8 @@ export const ContactForm = () => {
             name="message"
             placeholder="Your Message"
             required
+            minLength="2"
+            maxLength="5000"
           ></textarea>
         </div>
         <div
@@ -274,7 +296,11 @@ export const ContactForm = () => {
           ref={turnstileContainer}
           aria-label="Security check"
         ></div>
-        <input type="hidden" name="contact" value="contact" />
+        {turnstileError && (
+          <p className="st-form-error" role="alert">
+            {turnstileError}
+          </p>
+        )}
         <button
           className="st-btn st-style1 st-color1"
           type="submit"
