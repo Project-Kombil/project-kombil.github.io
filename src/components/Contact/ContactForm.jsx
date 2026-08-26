@@ -57,7 +57,6 @@ const alertTheme = {
     htmlContainer: "st-alert-text",
     closeButton: "st-alert-close",
     confirmButton: "st-alert-button",
-    loader: "st-alert-loader",
   },
 };
 
@@ -169,13 +168,6 @@ export const ContactForm = () => {
     }
 
     setIsSubmitting(true);
-    showContactAlert({
-      text: "Sending message...",
-      allowOutsideClick: false,
-      didOpen: () => {
-        Swal.showLoading();
-      },
-    });
 
     const controller = new AbortController();
     const requestTimeout = window.setTimeout(() => controller.abort(), 15_000);
