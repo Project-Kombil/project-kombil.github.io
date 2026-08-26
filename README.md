@@ -1,23 +1,15 @@
-# Alefay Kombil's Online Portfolio
+# Alefay Kombil
 
-Welcome to my online portfolio! I'm Alefay Kombil, a front-end developer specializing in UI/UX design. This repository hosts the code for my personal portfolio website, where I showcase my skills, projects, and experiences.
+This is my online portfolio.
 
 ## About Me
 
-I specialize in creating intuitive and engaging user interfaces with a focus on aesthetics and user experience.
+I am a front-end developer with a passion for UI/UX design. I build clear, practical, and engaging digital experiences that help businesses turn ideas into reliable web products.
 
-## Portfolio
+My experience spans React, Next.js, JavaScript, Node.js, PHP, WordPress, and CMS platforms. I work with businesses in Papua New Guinea, contributing across design, development, integrations, deployment, and ongoing site improvements.
 
-In this portfolio, you will find examples of my work in UI/UX design and front-end development. Feel free to explore and reach out if you have any questions!
+## Contact
 
-## Editing site content
+Email: [info@x07s.com](mailto:info@x07s.com)
 
-Portfolio content is organized in `src/data/`. Edit the JSON file that matches the page section you want to change, such as `projects.json`, `resume.json`, or `social.json`. Use `src/data/index.js` when importing content into React components.
-
-Public images remain under `public/images/`; keep existing image paths unchanged when editing content.
-
-## Contact Me
-
-You can reach me at info@x07s.com.
-
-Thank you for visiting my portfolio!
+LinkedIn: [kombil-alefay](https://www.linkedin.com/in/kombil-alefay/)
