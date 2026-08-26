@@ -1,50 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Swal from "sweetalert2";
 import "sweetalert2/src/sweetalert2.scss";
 import { trackEvent } from "../../utils/analytics";
+import { sendContactMessage } from "./contactApi";
+import useTurnstile from "./useTurnstile";
 
-const CONTACT_WORKER_URL =
-  import.meta.env.VITE_CONTACT_WORKER_URL ||
-  "https://online-portfolio-contact-form.kombil.workers.dev/";
 const TURNSTILE_SITE_KEY =
   import.meta.env.VITE_TURNSTILE_SITE_KEY || "0x4AAAAAAD-tMwRaBgwd0Ymq";
-const TURNSTILE_SCRIPT_ID = "cloudflare-turnstile-script";
-const TURNSTILE_SCRIPT_SRC =
-  "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
-
-let turnstileScriptPromise;
-
-const loadTurnstile = () => {
-  if (window.turnstile) return Promise.resolve();
-  if (turnstileScriptPromise) return turnstileScriptPromise;
-
-  turnstileScriptPromise = new Promise((resolve, reject) => {
-    const existingScript = document.getElementById(TURNSTILE_SCRIPT_ID);
-
-    const handleLoad = () => resolve();
-    const handleError = () => {
-      turnstileScriptPromise = null;
-      reject(new Error("Turnstile script could not be loaded"));
-    };
-
-    if (existingScript) {
-      existingScript.addEventListener("load", handleLoad, { once: true });
-      existingScript.addEventListener("error", handleError, { once: true });
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.id = TURNSTILE_SCRIPT_ID;
-    script.src = TURNSTILE_SCRIPT_SRC;
-    script.async = true;
-    script.defer = true;
-    script.addEventListener("load", handleLoad, { once: true });
-    script.addEventListener("error", handleError, { once: true });
-    document.body.appendChild(script);
-  });
-
-  return turnstileScriptPromise;
-};
 
 const alertTheme = {
   background: "#0a101e",
@@ -73,60 +35,17 @@ const showContactAlert = (options) => {
 
 export const ContactForm = () => {
   const form = useRef();
-  const turnstileContainer = useRef(null);
-  const turnstileWidgetId = useRef(null);
-  const [turnstileToken, setTurnstileToken] = useState("");
-  const [turnstileError, setTurnstileError] = useState("");
+  const {
+    containerRef: turnstileContainer,
+    token: turnstileToken,
+    error: turnstileError,
+    reset: resetTurnstile,
+  } = useTurnstile(TURNSTILE_SITE_KEY);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    const renderTurnstile = () => {
-      if (!isMounted) return;
-      if (!window.turnstile || !turnstileContainer.current) return;
-      if (turnstileWidgetId.current !== null) return;
-
-      turnstileWidgetId.current = window.turnstile.render(
-        turnstileContainer.current,
-        {
-          sitekey: TURNSTILE_SITE_KEY,
-          callback: setTurnstileToken,
-          "expired-callback": () => setTurnstileToken(""),
-          "error-callback": () => setTurnstileToken(""),
-        }
-      );
-    };
-
-    loadTurnstile()
-      .then(renderTurnstile)
-      .catch(() => {
-        if (isMounted) {
-          setTurnstileError(
-            "The security check could not be loaded. Please refresh the page and try again.",
-          );
-        }
-      });
-
-    return () => {
-      isMounted = false;
-      if (window.turnstile && turnstileWidgetId.current !== null) {
-        window.turnstile.remove(turnstileWidgetId.current);
-        turnstileWidgetId.current = null;
-      }
-    };
-  }, []);
 
   const isValidEmail = (email) => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
-  };
-
-  const resetTurnstile = () => {
-    setTurnstileToken("");
-    if (window.turnstile && turnstileWidgetId.current !== null) {
-      window.turnstile.reset(turnstileWidgetId.current);
-    }
   };
 
   const sendEmail = async (e) => {
@@ -173,15 +92,9 @@ export const ContactForm = () => {
     const requestTimeout = window.setTimeout(() => controller.abort(), 15_000);
 
     try {
-      const response = await fetch(CONTACT_WORKER_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          turnstileToken,
-        }),
+      const response = await sendContactMessage({
+        formData,
+        turnstileToken,
         signal: controller.signal,
       });
 

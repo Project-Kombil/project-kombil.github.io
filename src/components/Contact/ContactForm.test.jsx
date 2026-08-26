@@ -6,14 +6,14 @@ import {
   screen,
   waitFor,
 } from "@testing-library/react";
-import { ContactForm } from "./components/Contact/ContactForm";
+import { ContactForm } from "./ContactForm";
 import Swal from "sweetalert2";
 
 vi.mock("sweetalert2", () => ({
   default: { fire: vi.fn(), showLoading: vi.fn() },
 }));
 
-vi.mock("./utils/analytics", () => ({
+vi.mock("../../utils/analytics", () => ({
   trackEvent: vi.fn(),
 }));
 
