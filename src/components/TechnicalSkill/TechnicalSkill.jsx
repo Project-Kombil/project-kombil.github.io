@@ -14,8 +14,8 @@ const TechnicalSkill = ({ data }) => {
             <div
               className="col-lg-4 col-md-6"
               key={index}
-              data-aos={element.effect ? element.effect : "zoom-out-up"}
-              data-aos-duration={element.duration ? element.duration : "800"}
+              data-aos="zoom-out-up"
+              data-aos-duration="500"
               data-aos-delay={element.delay ? element.delay : "200"}
             >
               <div className={`st-iconbox st-style1`}>

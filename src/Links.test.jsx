@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import data from "./Data.json";
+import { projectsData, socialData } from "./data";
 
-const projectItems = data.creationData.creationItems;
-const socials = [...data.socialData, ...data.socialData2];
+const projectItems = projectsData.creationItems;
+const socials = socialData;
 const publicPath = (assetPath) => join(process.cwd(), "public", assetPath);
 
 describe("project links", () => {

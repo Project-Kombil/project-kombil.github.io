@@ -1,0 +1,50 @@
+{
+  "experienceTitle": "Experience",
+  "experience": [
+    {
+      "title": "Tech Developer",
+      "duration": "May 2025 - Present",
+      "subTitle": "Alef Solutions, National Capital District",
+      "text": "I worked on Attendo, an event management SaaS built to handle registrations and check-ins for real events. My role was designing and building the front end with JSX, React and Node while also helping with some backend tasks during the pilot rollout. I handled deployments and integrations through AWS, Resend and Vercel to keep things stable for users. I also built the Alef Solutions website and look after client sites, keeping them updated, fixing bugs and improving layouts and content across CMS platforms including BCPNG and Abus na Kumu. I contributed to Lev Tziyon as well, using Figma and Adobe XD to turn ideas into working screens."
+    },
+    {
+      "title": "Lead Fullstack Developer (previously Fullstack Developer)",
+      "duration": "March 2022 - Oct 2025",
+      "subTitle": "Be Pacific Digital Agency, National Capital District",
+      "text": "I led the development of client websites and web apps, working across both front end and back end while keeping projects moving from design to deployment. I worked mainly with React, PHP and CMS platforms to rebuild and improve websites for clients including the Business Council of Papua New Guinea and Atlas Steel, upgrading security and adding new features along the way. I introduced Git and project tracking to make collaboration easier and reduce rework, and I also set up Google Analytics and Data Studio reporting so the agency and clients could understand website performance and make informed improvements."
+    },
+    {
+      "title": "Freelance Developer",
+      "duration": "2023 - 2024",
+      "subTitle": "Freelance, National Capital District",
+      "text": "I worked directly with clients to design, develop and host their websites from start to finish, including Phantom Development Limited and PETA Sports Management. I set up emails and hosting environments for both companies and handled the full rollout, which meant turning their ideas into working interfaces and then keeping everything running smoothly after launch."
+    },
+    {
+      "title": "Junior Software Engineer Intern",
+      "duration": "Jun 2021 - Jul 2021",
+      "subTitle": "SwitchMaven, National Capital District",
+      "text": "Utilized the MERN stack and Grommet, a JavaScript theming library, to develop a cryptocurrency trading application, showcasing my proficiency in modern web technologies. I played a key role in the development of various features of the application, enhancing its functionality and user experience. I collaborated effectively with a team of developers, ensuring the timely delivery of the application that met clients requirements"
+    }
+  ],
+  "educationTitle": "Education",
+  "education": [
+    {
+      "title": "Software Development",
+      "duration": "2020 - 2021",
+      "subTitle": "SwitchMaven Bootcamp",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis."
+    },
+    {
+      "title": "Java Programming Certificate",
+      "duration": "2020 - 2021",
+      "subTitle": "University of Papua New Guinea (CEIT)",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis."
+    },
+    {
+      "title": "Advanced Web Technology Certificate",
+      "duration": "2020",
+      "subTitle": "University of Papua New Guinea (CEIT)",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis."
+    }
+  ]
+}

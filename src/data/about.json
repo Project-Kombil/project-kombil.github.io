@@ -1,0 +1,11 @@
+{
+  "imgLink": "/images/section/kombil.webp",
+  "title": "Alefay Kombil",
+  "subtitle": "Front-end Developer",
+  "text": "Front End Developer with experience across back end and API work, building complete and reliable web solutions using JavaScript, PHP, React, NextJS, NodeJS and CMS platforms. I turn ideas and wireframes into functional products that solve real business needs while applying practical UI/UX skills gained through hands on project work. My early career outside IT shaped the discipline and communication style I bring to tech today, and I continue to work with startups and small to medium businesses in Papua New Guinea to deliver modern and practical digital experiences as I grow in an evolving tech space.",
+  "details": [
+    { "title": "Email", "info": "info@x07s.com" },
+    { "title": "From", "info": "Papua New Guinea" },
+    { "title": "Language", "info": "English, Tok Pisin" }
+  ]
+}

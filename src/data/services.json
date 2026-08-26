@@ -1,0 +1,40 @@
+{
+  "services": [
+    {
+      "imgLink": "/images/icon/react.png",
+      "title": "React",
+      "text": "Build fast and responsive user interfaces with reusable components and smooth interaction handling using React.",
+      "delay": "400"
+    },
+    {
+      "imgLink": "/images/icon/javascript.png",
+      "title": "Vanilla Javascript",
+      "text": "Write clean JavaScript for dynamic features, form logic and UI behavior without relying on heavy frameworks.",
+      "delay": "600"
+    },
+    {
+      "imgLink": "/images/icon/nextjs.png",
+      "title": "NextJS",
+      "text": "Develop production-ready React applications with built-in routing, API routes and server-side rendering for performance.",
+      "delay": "300"
+    },
+    {
+      "imgLink": "/images/icon/nodejs.png",
+      "title": "NodeJS",
+      "text": "Handle backend logic and API operations using JavaScript on the server to support full-stack application features.",
+      "delay": "700"
+    },
+    {
+      "imgLink": "/images/icon/php.png",
+      "title": "PHP",
+      "text": "Create reliable backend functionality and custom features for web applications and CMS platforms, supporting real business workflows.",
+      "delay": "500"
+    },
+    {
+      "imgLink": "/images/icon/design.png",
+      "title": "Design",
+      "text": "Turn ideas into practical interface layouts using Figma or Adobe XD, keeping usability and clarity at the core of every screen.",
+      "delay": "200"
+    }
+  ]
+}

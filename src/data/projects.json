@@ -1,0 +1,84 @@
+{
+  "creationItems": [
+    {
+      "imgLink": "/images/portfolio/display_cards/attendo_webp.webp",
+      "imgLinkLg": "/images/portfolio/attendo.webp",
+      "title": "Attendo",
+      "subTitle": "Design and Development",
+      "link": "https://attendo.services",
+      "technology": ["Adobe XD", "React", "NextJS", "NodeJS", "AWS"]
+    },
+    {
+      "imgLink": "/images/portfolio/display_cards/alef-solutions_webp.webp",
+      "imgLinkLg": "/images/portfolio/alef-solutions.webp",
+      "title": "Alef Solutions",
+      "subTitle": "Website Design and Development",
+      "link": "https://alefsolutions.tech",
+      "technology": ["Adobe XD", "WordPress", "PHP", "Vanilla Javascript", "CSS"]
+    },
+    {
+      "imgLink": "/images/portfolio/display_cards/bcpng_webp.webp",
+      "imgLinkLg": "/images/portfolio/bcpng-home.webp",
+      "title": "Business Council of Papua New Guinea Website",
+      "subTitle": "Website Redesign and Development",
+      "link": "https://bcpng.org.pg",
+      "technology": ["Figma", "Adobe XD", "WordPress", "Vanilla Javascript", "CSS"]
+    },
+    {
+      "imgLink": "/images/portfolio/display_cards/atlas-steel-png_webp.webp",
+      "imgLinkLg": "/images/portfolio/atlas-steel-home.webp",
+      "title": "Atlas Steel PNG Website",
+      "subTitle": "Website Redesign and Development",
+      "link": "https://atlassteelpng.com.pg",
+      "technology": ["Adobe XD", "WordPress", "Vanilla Javascript", "CSS"]
+    },
+    {
+      "imgLink": "/images/portfolio/display_cards/lev-tziyon_webp.webp",
+      "imgLinkLg": "/images/portfolio/lev-tziyon.webp",
+      "title": "Lev Tziyon",
+      "subTitle": "Website Design and Development",
+      "link": "https://levtziyon.com",
+      "technology": ["Adobe XD", "WordPress", "Vanilla Javascript", "CSS"]
+    },
+    {
+      "imgLink": "/images/portfolio/display_cards/phantom-development-limited_webp.webp",
+      "imgLinkLg": "/images/portfolio/phantom-development-home.webp",
+      "title": "Phantom Development Limited",
+      "subTitle": "Website Design and Development",
+      "link": "https://phantomdevelopmentltd.com",
+      "technology": ["Adobe XD", "WordPress", "Vanilla Javascript", "CSS"]
+    },
+    {
+      "imgLink": "/images/portfolio/display_cards/abus-na-kumu_webp.webp",
+      "imgLinkLg": "/images/portfolio/abus-na-kumu-home.webp",
+      "title": "Abus Na Kumu E-Commerce Website",
+      "subTitle": "Website Design and Development",
+      "link": "https://abusnakumu.com.pg",
+      "technology": ["Adobe XD", "WordPress", "Vanilla Javascript", "CSS"]
+    },
+    {
+      "imgLink": "/images/portfolio/display_cards/solar-solutions_webp.webp",
+      "imgLinkLg": "/images/portfolio/solar-solutions-home.webp",
+      "title": "Solar Solutions Website",
+      "subTitle": "Website Design and Development",
+      "link": "https://solarsolutionspng.com",
+      "technology": ["Adobe XD", "WordPress", "Vanilla Javascript", "CSS"]
+    },
+    {
+      "imgLink": "/images/portfolio/display_cards/peta_webp.webp",
+      "imgLinkLg": "/images/portfolio/peta-home.webp",
+      "title": "PETA Sports Management Website",
+      "subTitle": "Website Design and Development",
+      "link": "https://peta.com.pg",
+      "technology": ["Adobe XD", "WordPress", "Vanilla Javascript", "CSS"]
+    },
+    {
+      "imgLink": "/images/portfolio/display_cards/crypto_webp.webp",
+      "imgLinkLg": "/images/portfolio/crypto-home_webp.webp",
+      "title": "Crypto Currency Trading Platform",
+      "subTitle": "Front-end Development",
+      "technology": ["React", "Grommet UI", "Vanilla Javascript", "CSS"],
+      "link": ""
+    }
+  ]
+}

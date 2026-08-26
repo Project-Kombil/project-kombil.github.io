@@ -1,5 +1,13 @@
 import { Suspense, lazy } from "react";
-import data from "../Data.json";
+import {
+  aboutData,
+  contactData,
+  heroData,
+  projectsData,
+  resumeData,
+  servicesData,
+  socialData,
+} from "../data";
 import Hero from "../components/Hero/Hero";
 
 const About = lazy(() => import("../components/About/About"));
@@ -15,30 +23,20 @@ const CreationSection = lazy(
 );
 
 const Home = () => {
-  const {
-    heroData,
-    aboutData,
-    serviceData,
-    creationData,
-    portfolioData,
-    contactData,
-    socialData,
-    socialData2,
-  } = data;
   return (
     <>
-      <Hero data={heroData.data} socialData={socialData2} />
+      <Hero data={heroData} socialData={socialData} />
       <Suspense fallback={null}>
         <About data={aboutData} data-aos="fade-right" />
       </Suspense>
       <Suspense fallback={null}>
-        <TechnicalSkill data={serviceData} data-aos="fade-right" />
+        <TechnicalSkill data={servicesData} data-aos="fade-right" />
       </Suspense>
       <Suspense fallback={null}>
-        <PortfolioSection data={portfolioData} />
+        <PortfolioSection data={resumeData} />
       </Suspense>
       <Suspense fallback={null}>
-        <CreationSection data={creationData} data-aos="fade-right" />
+        <CreationSection data={projectsData} data-aos="fade-right" />
       </Suspense>
       <Suspense fallback={null}>
         <Contact
